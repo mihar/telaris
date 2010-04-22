@@ -1,0 +1,8 @@
+.DS_Store
+.eprj
+config/initializers/gmaps.rb
+log/*.log
+tmp/**/*
+nbproject
+config/database.yml
+db/*.sqlite3
