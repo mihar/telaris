@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  photographable_id: 1
+  photographable_type: 1
+
+two:
+  photographable_id: 1
+  photographable_type: 1
