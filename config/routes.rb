@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.filter 'locale'
+  
   map.resource :about
   map.resources :inquiries
   
@@ -17,6 +19,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :categories do |category|
     category.resources :products
     category.resources :photos, :only => [:new, :create, :destroy]
+  end
+
+  map.with_options :controller => :pages do |static|
+    static.contact "/contact", :action => :contact
   end
   
   map.root :controller => :pages

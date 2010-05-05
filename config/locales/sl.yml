@@ -1,4 +1,11 @@
 sl:
+  menu:
+    home: "Domov"
+    posts: "Novice"
+    about: "Podjetje"
+    partners: "Partnerji"
+    offer: "Ponudba"
+    inquiries: "Poizvedba"
   
   date:
     formats:

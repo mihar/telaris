@@ -1,4 +1,6 @@
 class AboutsController < InheritedResources::Base
+  skip_before_filter :authenticate, :only => :show
+  
   protected
   
   def resource
