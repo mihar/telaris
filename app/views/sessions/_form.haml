@@ -1,0 +1,7 @@
+- form_tag session_path do
+  %fieldset
+    .question= label_tag :password, "Geslo"
+    .answer= password_field_tag :password
+  
+  %fieldset.submit  
+    = submit_tag "Prijava"
