@@ -5,8 +5,8 @@
 # Make sure the secret is at least 30 characters and all random, 
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
-  :key         => '_app_session',
-  :secret      => '9f003b81e04e0ef013ae2527bab4b30d895ca2e703c2c8f91027706ddb48b67cc1037159088f47eb69b96e55fabbf7b5dd6cd78da1ac49ca56d557f424c38136'
+  :key         => '_telaris_session',
+  :secret      => '9f003b81e04e0easi7dsa7d77d7777777ddb48b67cc1037159088f47eb69b96e55fabbf7b5dd6cd78da1ac49ca56d557f424c38136'
 }
 
 # Use the database for sessions instead of the cookie-based default,
