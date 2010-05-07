@@ -6,6 +6,14 @@ sl:
     partners: "Partnerji"
     offer: "Ponudba"
     inquiries: "Poizvedba"
+    
+  head:
+    title: "Telaris d.o.o. - trženje laserskih aplikacij, rešitev in sistemov"
+    choose_language: "Izberite jezik"
+    language_sl: "Slovenščina"
+    language_en: "Angleščina"
+    language_hr: "Hrvaščina"
+    language_sr: "Srbščina"
   
   date:
     formats:
@@ -45,7 +53,7 @@ sl:
 
   activerecord:
     models:
-      book: "Knjiga"
+      post: "Novica"
       template:
         header:
           one:    "Ena napaka preprečuje, da bi shranili {{model}}"

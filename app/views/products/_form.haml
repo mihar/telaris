@@ -1,0 +1,21 @@
+= error_messages_for :product
+
+- form_for resource, :html => {:multipart => true} do |f|
+  %fieldset
+    %legend Naziv
+    = lang_specific_field f, :name, "Naziv"
+  
+  %fieldset
+    %legend Opis
+    = lang_specific_field f, :body, "Opis", :text_area
+  
+  %fieldset
+    %legend Fotografije
+    - f.fields_for :photos do |fp|
+      .question= fp.label :photo, "Fotografija"
+      .answer= fp.file_field :photo
+      
+  
+  %fieldset.submit
+    = f.submit :Shrani
+    

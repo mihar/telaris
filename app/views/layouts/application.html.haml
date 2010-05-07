@@ -1,7 +1,8 @@
 !!! strict
 %html
   %head
-    %title= yield :title
+    %title= yield(:title) || t("head.title")
+    
     = stylesheet_link_tag "application"
     =# javascript_include_tag :defaults, "prototype.uploadProgress.js", "lowpro", :cache => true
     = yield :head
@@ -10,8 +11,10 @@
       Osvežujem 
       = image_tag 'ui/loader.gif'
     #header
-      %h1= link_to "Telaris", root_path
-        
+      #languages
+        .text= t("head.choose_language")
+        - I18n.available_locales.each { |l| puts link_to_language l }
+      %h1= link_to_span t("head.title"), root_path        
       = render "layouts/menu"
       #authentication
         - if admin?
@@ -19,7 +22,6 @@
           %p.log_out= link_to "Odjava", session_path, :method => :delete
         - else
           %p.log_in= link_to "Prijava", new_session_path
-          #new_session_form= render :partial => "sessions/form"
         
 
     #content

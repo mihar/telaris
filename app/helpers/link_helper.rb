@@ -19,11 +19,13 @@ module LinkHelper
      str = obj.title
     elsif obj.respond_to? :name
      str = obj.name
-    else
-     str = obj.id
     end
-
-    "'#{str}' - Ste prepričani o izbrisu?"
+    if str
+      str = "'#{str}' - Ste prepričani o izbrisu?"
+    else
+      str = "Ste prepričani o izbrisu?"
+    end
+    str
   end
 
   def link_to_back(custom_path=nil)
@@ -61,5 +63,16 @@ module LinkHelper
   
   def link_to_local(caption, anchor, save_params=[])
     link_to_anchor "#{caption} ↓", anchor, save_params
+  end
+  
+  def link_to_language(l)
+    l = l.to_s
+    klass = l
+    klass += " active" if l == current_locale
+    link_to content_tag(:span, t("head.language_#{l}")), {:locale => l}, :class => klass, :title => t("head.language_#{l}")
+  end
+  
+  def link_to_span(text, url)
+    link_to content_tag(:span, text), url
   end
 end

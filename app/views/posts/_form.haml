@@ -1,0 +1,9 @@
+= error_messages_for :post
+
+- form_for resource do |f|
+  %fieldset
+    %legend Novica
+    = lang_specific_field f, :title, "Naziv"
+    = lang_specific_field f, :body, "Besedilo", :text_area
+  %fieldset.submit
+    = f.submit :Shrani

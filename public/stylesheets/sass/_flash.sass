@@ -1,0 +1,19 @@
+=flash
+  +radius
+  :padding = !gutter / 2 + "px"
+  :margin
+    :top = !gutter + "px"
+    :bottom = !gutter + "px"
+  :width 75%
+  
+#flash
+  #notice
+    +flash
+    :background #E3FFD6
+    :border 2px solid #419C1E
+  #error
+    +flash
+    :background #FEE1DD
+    :border 2px solid #000
+      :color = !red
+  

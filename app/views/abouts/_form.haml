@@ -1,0 +1,10 @@
+= error_messages_for :about
+
+- form_for resource, :url => about_path do |f|
+  %fieldset
+    %legend O podjetju
+    = lang_specific_field f, :about, "Besedilo", :text_area
+  %fieldset.submit
+    = f.submit :Shrani
+    
+  

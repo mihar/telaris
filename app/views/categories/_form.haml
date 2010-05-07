@@ -1,0 +1,24 @@
+= error_messages_for :category
+
+- form_for resource, :html => {:multipart => true} do |f|
+  %fieldset
+    %legend Nadkategorija
+    .question= f.label :parent_id, "Nadkategorija"
+    .answer= f.collection_select :parent_id, Category.all.reject { |c| c == resource }, :id, :name_sl, :include_blank => true
+
+  %fieldset
+    %legend Naziv
+    = lang_specific_field f, :name, "Naziv"
+    
+  %fieldset
+    %legend Opis
+    = lang_specific_field f, :description, "Opis", :text_area
+    
+  %fieldset
+    %legend Slika
+    - f.fields_for :photo do |fp|
+      .question= fp.label :photo, "Slika"
+      .answer= fp.file_field :photo
+      
+  %fieldset.submit
+    = f.submit :Shrani

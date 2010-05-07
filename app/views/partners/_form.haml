@@ -1,0 +1,22 @@
+= error_messages_for :partner
+
+- form_for resource, :html => {:multipart => true} do |f|
+  %fieldset
+    %legend Partner
+    .question= f.label :name, "Naziv"
+    .answer= f.text_field :name
+  
+    .question= f.label :url, "Spletna povezava"
+    .answer= f.text_field :url
+  
+    - if resource.logo.file?
+      .question= f.label :logo, "Logotip"
+      .answer= image_tag resource.logo.url(:small)
+      .question= f.label :logo, "Nov logotip"
+    - else
+      .question= f.label :logo, "Logotip"
+    
+    .answer= f.file_field :logo
+  
+  %fieldset.submit
+    = f.submit :Shrani

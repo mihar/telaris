@@ -1,0 +1,8 @@
+.post
+  %h2= post.send("title_#{current_locale}")
+  .timestamp
+    %em= l post.created_at
+  .body= post.send("body_#{current_locale}_html")
+  
+  - admin_section do
+    = link_to "Uredi", edit_post_path(post)

@@ -1,0 +1,6 @@
+= title "Uredi partnerja" 
+= render "form"
+= link_to_back
+
+- admin_section do
+  = link_to "Odstrani", resource, :method => :delete, :confirm => destroy_confirmation(resource)

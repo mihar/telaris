@@ -12,14 +12,31 @@
 ActiveRecord::Schema.define(:version => 20100422113628) do
 
   create_table "abouts", :force => true do |t|
-    t.text     "about"
-    t.text     "about_html"
+    t.text     "about_sl"
+    t.text     "about_en"
+    t.text     "about_hr"
+    t.text     "about_sr"
+    t.text     "about_sl_html"
+    t.text     "about_en_html"
+    t.text     "about_hr_html"
+    t.text     "about_sr_html"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "categories", :force => true do |t|
-    t.string   "name"
+    t.string   "name_sl"
+    t.string   "name_en"
+    t.string   "name_hr"
+    t.string   "name_sr"
+    t.string   "description_sl"
+    t.string   "description_en"
+    t.string   "description_hr"
+    t.string   "description_sr"
+    t.string   "description_sl_html"
+    t.string   "description_en_html"
+    t.string   "description_hr_html"
+    t.string   "description_sr_html"
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -58,18 +75,36 @@ ActiveRecord::Schema.define(:version => 20100422113628) do
   end
 
   create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.text     "body_html"
+    t.string   "title_sl"
+    t.string   "title_en"
+    t.string   "title_hr"
+    t.string   "title_sr"
+    t.text     "body_sl"
+    t.text     "body_en"
+    t.text     "body_hr"
+    t.text     "body_sr"
+    t.text     "body_sl_html"
+    t.text     "body_en_html"
+    t.text     "body_hr_html"
+    t.text     "body_sr_html"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "products", :force => true do |t|
-    t.string   "name"
+    t.string   "name_sl"
+    t.string   "name_en"
+    t.string   "name_hr"
+    t.string   "name_sr"
     t.integer  "category_id"
-    t.text     "body"
-    t.text     "body_html"
+    t.text     "body_sl"
+    t.text     "body_en"
+    t.text     "body_hr"
+    t.text     "body_sr"
+    t.text     "body_sl_html"
+    t.text     "body_en_html"
+    t.text     "body_hr_html"
+    t.text     "body_sr_html"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
