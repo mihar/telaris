@@ -5,6 +5,10 @@ class CreateCategories < ActiveRecord::Migration
       t.string :name_en
       t.string :name_hr
       t.string :name_sr
+      t.string :abstract_sl
+      t.string :abstract_en
+      t.string :abstract_hr
+      t.string :abstract_sr
       t.string :description_sl
       t.string :description_en
       t.string :description_hr

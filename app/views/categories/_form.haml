@@ -9,6 +9,11 @@
   %fieldset
     %legend Naziv
     = lang_specific_field f, :name, "Naziv"
+
+  %fieldset
+    %legend Povzetek
+    = lang_specific_field f, :abstract, "Povzetek", :text_area
+
     
   %fieldset
     %legend Opis
@@ -16,6 +21,9 @@
     
   %fieldset
     %legend Slika
+    - if resource.photo
+      = f.label "Obstoječa slika"
+      = image_tag resource.photo.photo.url(:small)
     - f.fields_for :photo do |fp|
       .question= fp.label :photo, "Slika"
       .answer= fp.file_field :photo

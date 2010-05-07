@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   def admin?
-    session[:password] == "t3l4r1s"
+    session[:password] == "telaris"
   end
   
   def authenticate

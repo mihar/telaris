@@ -1,5 +1,5 @@
 %li
   - if category.photo and category.photo.photo.file?
-    = image_tag category.photo.url(:small)
+    = image_tag category.photo.photo.url(:small)
   = link_to category.send("name_#{current_locale}"), category_products_path(category)
-  .description= category.send("description_#{current_locale}_html")
+  .abstract= category.send("abstract_#{current_locale}")

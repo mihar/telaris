@@ -29,6 +29,10 @@ ActiveRecord::Schema.define(:version => 20100422113628) do
     t.string   "name_en"
     t.string   "name_hr"
     t.string   "name_sr"
+    t.string   "abstract_sl"
+    t.string   "abstract_en"
+    t.string   "abstract_hr"
+    t.string   "abstract_sr"
     t.string   "description_sl"
     t.string   "description_en"
     t.string   "description_hr"
@@ -65,7 +69,7 @@ ActiveRecord::Schema.define(:version => 20100422113628) do
 
   create_table "photos", :force => true do |t|
     t.integer  "photographable_id"
-    t.integer  "photographable_type"
+    t.string   "photographable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"

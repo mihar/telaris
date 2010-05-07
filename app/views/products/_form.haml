@@ -1,6 +1,6 @@
 = error_messages_for :product
 
-- form_for resource, :html => {:multipart => true} do |f|
+- form_for [resource.category, resource], :html => {:multipart => true} do |f|
   %fieldset
     %legend Naziv
     = lang_specific_field f, :name, "Naziv"
@@ -11,7 +11,11 @@
   
   %fieldset
     %legend Fotografije
-    - f.fields_for :photos do |fp|
+    - unless resource.photos.empty?
+      = f.label "Obstoječe fotografije"
+      - resource.photos.each do |photo|
+        = image_tag photo.photo.url(:small)
+    - f.fields_for :photos, resource.photos.build do |fp|
       .question= fp.label :photo, "Fotografija"
       .answer= fp.file_field :photo
       

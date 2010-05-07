@@ -1,0 +1,7 @@
+%tr
+  %td= inquiry.contact_name
+  %td= inquiry.industry
+  %td= l inquiry.created_at
+  %td
+    - admin_section do
+      = link_to "Odpri", inquiry

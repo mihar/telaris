@@ -1,4 +1,6 @@
-= title(@category? @category.send("name_#{current_locale}") : t(".title"))
+= title @category.send("name_#{current_locale}")
+.description= @category.send("description_#{current_locale}_html")
+
 = render collection
 
 - admin_section do

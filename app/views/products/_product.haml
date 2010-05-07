@@ -1,2 +1,4 @@
 %li
-  = link_to product.send("name_#{current_locale}"), product
+  - if product.photo?
+    = image_tag product.photo.url(:small)
+  = link_to product.send("name_#{current_locale}"), [product.category, product]

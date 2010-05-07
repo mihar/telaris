@@ -1,0 +1,14 @@
+= title "Poizvedba ##{resource.id}"
+
+.field
+  .description Datum
+  .value= l resource.created_at
+  
+- field resource, :contact_name
+- field resource, :industry
+- field resource, :phone
+- field resource, :email
+
+.field.body
+  .description Besedilo
+  .value=h resource.body

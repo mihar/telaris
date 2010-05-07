@@ -1,0 +1,28 @@
+= title t(".title")
+
+%p= t(".instructions")
+%p= t(".mandatory")
+
+= error_messages_for :inquiry
+
+- form_for @inquiry do |f|
+  %fieldset
+    %legend Vprašalnik
+    
+    .question= f.label :contact_name, Inquiry.human_attribute_name(:contact_name)
+    .answer= f.text_field :contact_name
+    
+    .question= f.label :industry, Inquiry.human_attribute_name(:industry)
+    .answer= f.text_field :industry
+    
+    .question= f.label :phone, Inquiry.human_attribute_name(:phone)
+    .answer= f.text_field :phone
+    
+    .question= f.label :email, Inquiry.human_attribute_name(:email)
+    .answer= f.text_field :email
+    
+    .question= f.label :body, Inquiry.human_attribute_name(:body)
+    .answer= f.text_area :body
+  
+  %fieldset.submit
+    = f.submit t("forms.submit.send")

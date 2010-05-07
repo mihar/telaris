@@ -14,6 +14,16 @@ sl:
     language_en: "Angleščina"
     language_hr: "Hrvaščina"
     language_sr: "Srbščina"
+
+  forms:
+    submit:
+      send: "Pošlji"
+      
+  inquiries:
+    new:
+      title: "Poizvedba"
+      instructions: "Na vaša vprašanja Vam bomo z veseljem odgovorili. Izpolnite spodnji formular in naš odgovor boste prejeli v najkrajšem možnem času."
+      mandatory: "Polja označena z * morajo biti obvezno izpolnjena!"
   
   date:
     formats:
@@ -53,7 +63,16 @@ sl:
 
   activerecord:
     models:
-      post: "Novica"
+      post: "novica"
+      inquiry: "poizvedba"
+    attributes:
+      inquiry:
+        contact_name: "Podjetje oz. vaše ime"
+        industry: "Industrija"
+        phone: "Telefon"
+        email: "E-mail"
+        body: "Vaše sporočilo / vprašanje"
+    errors:
       template:
         header:
           one:    "Ena napaka preprečuje, da bi shranili {{model}}"
