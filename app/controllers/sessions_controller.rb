@@ -4,7 +4,18 @@ class SessionsController < ApplicationController
   
   def create
     session[:password] = params[:password]
-    redirect_to root_path
+    if admin?
+      flash[:notice] = "Uspešno prijavljeni!"
+      if back_to = session[:back_to]
+        session[:back_to] = nil
+        redirect_to back_to
+      else
+        redirect_to root_path
+      end
+    else
+      flash[:error] = "Napačno geslo!"
+      render :action => :new
+    end
   end
   
   def destroy
