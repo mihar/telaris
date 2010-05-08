@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     session[:password] = params[:password]
     if admin?
       flash[:notice] = "Uspešno prijavljeni!"
-      if back_to = session[:back_to]
+      if session[:back_to] and back_to = session[:back_to]
         session[:back_to] = nil
         redirect_to back_to
       else
@@ -19,6 +19,7 @@ class SessionsController < ApplicationController
   end
   
   def destroy
+    flash[:notice] = "Uspešno odjavljeni!"
     session[:password] = nil
     redirect_to root_path    
   end

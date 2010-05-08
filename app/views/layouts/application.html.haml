@@ -15,6 +15,7 @@
         .text= t("head.choose_language")
         - I18n.available_locales.each { |l| puts link_to_language l }
       %h1= link_to_span t("head.title"), root_path        
+      %h2= link_to_span t("head.subtitle"), root_path        
       = render "layouts/menu"
       #authentication
         - if admin?

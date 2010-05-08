@@ -1,5 +1,6 @@
-!width = 960
+!width = 800
 !gutter = 20
+!columns = 16
 
 !yellow = #E3A924
 !red = #9B2B1A
@@ -70,7 +71,7 @@
 =normal
   :font-weight normal
 =ultra_small_text
-  :font-size 12px
+  :font-size 16px
 =small_text
   :font-size 14px
 =mid_text
@@ -145,16 +146,17 @@ body
   :background url(/images/backgrounds/body_gradient.png) repeat-x fixed
   
 #header
-  +wrapper(12)
+  +wrapper(16)
   +radius
   :position relative
-  :background url(/images/head/book.jpg) no-repeat left 40%
+  :background url(/images/head/head_laser.jpg) no-repeat
+  :height 200px
   :margin
     :top = !gutter + "px"
     :bottom = !gutter + "px"
 
 #content
-  +wrapper(12)
+  +wrapper(16)
   +radius
   +clearfix
   :position relative
@@ -201,7 +203,7 @@ body
     
   
 #footer
-  +wrapper(12)
+  +wrapper(16)
   :margin
     :top 25px
   :padding

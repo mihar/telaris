@@ -1,6 +1,22 @@
 <%= title t(".title") %>
 <%= @about.send("about_#{current_locale}_html") %>
 
+<div>
+  <%= image_tag "telaris_logo.jpg" %>
+</div>
+<div class="address">
+  <p>
+    <strong>Telaris, trženje laserskih aplikacij, rešitev in sistemov d.o.o.</strong>
+  </p>
+  <p>Otiški vrh 53</p>
+  <p>2373 Šentjanž pri Dravogradu</p>
+  <p>Slovenija</p>
+  <p>T: +386 (0)2 878 51 04</p>
+  <p>F: +386 (0)2 878 51 05</p>
+  <p>M: +386 (0)40 657 574</p>
+  <p>E: info@telaris.si</p>
+  <p>W: http://telaris.si</p>
+</div>
 <div class='map'>
 <script src='http://maps.google.com/maps?file=api&amp;v=2&amp;key=<%= GOOGLE_MAPS_API_KEY %>' type='text/javascript'></script>
 <script type="text/javascript">

@@ -9,8 +9,10 @@ class ApplicationController < ActionController::Base
   end
   
   def authenticate
-    session[:back_to] = request.url
-    redirect_to new_session_path unless admin?
+    unless admin?
+      session[:back_to] = request.url
+      redirect_to new_session_path 
+    end
   end
   
   def set_locale

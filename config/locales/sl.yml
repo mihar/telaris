@@ -8,7 +8,8 @@ sl:
     inquiries: "Poizvedba"
     
   head:
-    title: "Telaris d.o.o. - trženje laserskih aplikacij, rešitev in sistemov"
+    title: "Telaris d.o.o."
+    subtitle: "Trženje laserskih aplikacij, rešitev in sistemov"
     choose_language: "Izberite jezik"
     language_sl: "Slovenščina"
     language_en: "Angleščina"
@@ -19,6 +20,20 @@ sl:
     submit:
       send: "Pošlji"
       
+  index:
+    title: "Dobrodošli"
+  posts:
+    index:
+      title: "Novice"
+  partners:
+    index:
+      title: "Partnerji"
+  categories:
+    index:
+      title: "Ponudba"
+  abouts:
+    show:
+      title: "Podjetje"
   inquiries:
     new:
       title: "Poizvedba"
