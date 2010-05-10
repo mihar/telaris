@@ -23,17 +23,43 @@
           
 #languages
   :position absolute
-  :bottom 20px
-  :right 20px
-  a, .caption
-    :display block
-    :width 100px
-    :background url(/images/backgrounds/50black.png) 
-    :padding 5px 
-    :color #fff
-    +sans
-    +dark_shadow
-    +small_radius
-  a
-    :display block
+  :bottom 15px
+  :right 15px
+  :text-align right
+  &:hover 
+    .list 
+      :background url(/images/backgrounds/20black.png)
+      a
+        :display block
+  .list
+    :padding 5px
+    +radius
+    a
+      +sans
+      +dark_shadow
+      +small_radius
+      :display none
+      :width 100px
+      :background url(/images/backgrounds/50black.png)
+      :padding 5px
+      :color #fff
+      :margin
+        :bottom 5px
+      &:hover
+        :background url(/images/backgrounds/25white.png)
+      span
+        :display block
+        :padding
+          :right 25px
+      &.sl span
+        :background url(/images/flags/si.png) no-repeat right center
+      &.en span
+        :background url(/images/flags/en.png) no-repeat right center
+      &.sr span
+        :background url(/images/flags/sr.png) no-repeat right center
+      &.hr span
+        :background url(/images/flags/hr.png) no-repeat right center
+
+      &.active
+        :display block
    

@@ -7,5 +7,8 @@ module ApplicationHelper
     end
   end
   
-  
+  def languages
+    available_locales = I18n.available_locales.reject {|l| l.to_s == current_locale} + [current_locale]
+    available_locales.each { |l| puts link_to_language l }
+  end
 end

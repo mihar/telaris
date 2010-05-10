@@ -17,6 +17,8 @@ ActionController::Routing::Routes.draw do |map|
     static.contact "/contact", :action => :contact
   end
   
+  map.login "/a", :controller => :sessions, :action => :new
+  
   map.root :controller => :pages
   map.resource :session
 end
