@@ -101,7 +101,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
   padding: 0; }
 #header h1 {
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: 18px; }
   #header h1 a {
     display: block;
@@ -112,11 +112,66 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
       display: none; }
 #header h2 {
   position: absolute;
-  top: 100px;
+  top: 80px;
   left: 20px; }
   #header h2 a {
     font: normal 14px/14px Helvetica, Arial, sans-serif;
     color: #fff; }
+
+#menu {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+  #menu ol {
+    margin: 0;
+    margin-left: 12px;
+    display: inline-block;
+    display: block; }
+    #menu ol:after {
+      clear: both;
+      content: ' ';
+      display: block;
+      font-size: 0;
+      line-height: 0;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    * html #menu ol {
+      height: 1%; }
+    #menu ol li {
+      list-style: none;
+      float: left; }
+      #menu ol li a {
+        display: block;
+        background: url(/images/backgrounds/50black.png);
+        padding: 5px;
+        margin: 20px 5px;
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        text-shadow: 0px 1px 1px #272727;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px; }
+        #menu ol li a:hover {
+          background: url(/images/backgrounds/25white.png); }
+
+#languages {
+  position: absolute;
+  bottom: 20px;
+  right: 20px; }
+  #languages a, #languages .caption {
+    display: block;
+    width: 100px;
+    background: url(/images/backgrounds/50black.png);
+    padding: 5px;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    text-shadow: 0px 1px 1px #272727;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; }
+  #languages a {
+    display: block; }
 
 #flash #notice {
   border-radius: 7px;
