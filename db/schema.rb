@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100422113628) do
+ActiveRecord::Schema.define(:version => 20100511181049) do
 
   create_table "abouts", :force => true do |t|
     t.text     "about_sl"
@@ -111,6 +111,38 @@ ActiveRecord::Schema.define(:version => 20100422113628) do
     t.text     "body_sr_html"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "summary_sl"
+    t.text     "summary_en"
+    t.text     "summary_hr"
+    t.text     "summary_sr"
+    t.text     "summary_sl_html"
+    t.text     "summary_en_html"
+    t.text     "summary_hr_html"
+    t.text     "summary_sr_html"
+    t.text     "pitch_sl"
+    t.text     "pitch_en"
+    t.text     "pitch_hr"
+    t.text     "pitch_sr"
+    t.text     "type_table_sl"
+    t.text     "type_table_en"
+    t.text     "type_table_hr"
+    t.text     "type_table_sr"
+    t.text     "safety_table_sl"
+    t.text     "safety_table_en"
+    t.text     "safety_table_hr"
+    t.text     "safety_table_sr"
+    t.text     "basic_table_sl"
+    t.text     "basic_table_en"
+    t.text     "basic_table_hr"
+    t.text     "basic_table_sr"
+    t.text     "system_sl"
+    t.text     "system_en"
+    t.text     "system_hr"
+    t.text     "system_sr"
+    t.string   "system_photo_file_name"
+    t.string   "system_photo_content_type"
+    t.integer  "system_photo_file_size"
+    t.datetime "system_photo_updated_at"
   end
 
 end

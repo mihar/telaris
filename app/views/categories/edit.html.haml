@@ -1,3 +1,6 @@
 = title "Uredi kategorijo"
 = render "form"
 = link_to_back
+
+- admin_section do
+  = link_to "Odstrani kategorijo", @category, :method => :delete, :confirm => destroy_confirmation(@category)

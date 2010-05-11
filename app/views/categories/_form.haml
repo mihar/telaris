@@ -1,10 +1,10 @@
 = error_messages_for :category
 
 - form_for resource, :html => {:multipart => true} do |f|
-  %fieldset
-    %legend Nadkategorija
-    .question= f.label :parent_id, "Nadkategorija"
-    .answer= f.collection_select :parent_id, Category.all.reject { |c| c == resource }, :id, :name_sl, :include_blank => true
+  / %fieldset
+  /   %legend Nadkategorija
+  /   .question= f.label :parent_id, "Nadkategorija"
+  /   .answer= f.collection_select :parent_id, Category.all.reject { |c| c == resource }, :id, :name_sl, :include_blank => true
 
   %fieldset
     %legend Naziv
@@ -21,9 +21,9 @@
     
   %fieldset
     %legend Slika
-    - if resource.photo
+    - if resource.photo and resource.photo.photo.file?
       = f.label "Obstoječa slika"
-      = image_tag resource.photo.photo.url(:small)
+      = image_tag resource.photo.photo.url(:square)
     - f.fields_for :photo do |fp|
       .question= fp.label :photo, "Slika"
       .answer= fp.file_field :photo

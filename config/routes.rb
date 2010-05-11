@@ -19,6 +19,6 @@ ActionController::Routing::Routes.draw do |map|
   
   map.login "/a", :controller => :sessions, :action => :new
   
-  map.root :controller => :pages
+  map.root :controller => :posts
   map.resource :session
 end

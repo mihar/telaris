@@ -7,6 +7,8 @@ sl:
     offer: "Ponudba"
     inquiries: "Poizvedba"
     
+  site:
+    title: "Telaris d.o.o. - Trženje laserskih aplikacij, rešitev in sistemov"
   head:
     title: "Telaris d.o.o."
     subtitle: "Trženje laserskih aplikacij, rešitev in sistemov"

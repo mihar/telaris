@@ -4,5 +4,4 @@
 .body= @product.send("body_#{current_locale}_html")
 
 - admin_section do
-  = link_to "Uredi produkt", edit_category_product_path(@product)
-  = link_to "Odstrani produkt", [@product.category, @product], :method => :delete, :confirm => destroy_confirmation(@product)
+  = link_to "Uredi produkt", edit_category_product_path(@product.category, @product)

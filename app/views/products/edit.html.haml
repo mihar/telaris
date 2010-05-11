@@ -1,3 +1,6 @@
 = title "Uredi produkt"
 = render "form"
 = link_to_back
+
+- admin_section do
+  = link_to "Odstrani produkt", [@product.category, @product], :method => :delete, :confirm => destroy_confirmation(@product)

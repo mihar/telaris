@@ -9,6 +9,10 @@
     %legend Opis
     = lang_specific_field f, :body, "Opis", :text_area
   
+  %fieldset 
+    %legend Tabela
+    = f.tinymce :
+  
   %fieldset
     %legend Fotografije
     - unless resource.photos.empty?

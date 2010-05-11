@@ -1,5 +1,9 @@
-%li
+.category
   - if category.photo and category.photo.photo.file?
-    = image_tag category.photo.photo.url(:small)
-  = link_to category.send("name_#{current_locale}"), category_products_path(category)
-  .abstract= category.send("abstract_#{current_locale}")
+    = link_to image_tag(category.photo.photo.url(:square)), category_products_path(category)
+  .text
+    %h2= link_to category.send("name_#{current_locale}"), category_products_path(category)
+    .abstract= truncate category.send("abstract_#{current_locale}"), 180
+    
+  - admin_section do
+    = link_to "Uredi kategorijo", edit_category_path(category)
