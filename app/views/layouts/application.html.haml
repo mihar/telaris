@@ -13,8 +13,8 @@
       = image_tag 'ui/loader.gif'
       
     #header
-      #authentication
-        - if admin?
+      - if admin?
+        #authentication
           %p.logged_in Prijavljen kot adminstrator
           %p.log_out= link_to "Odjava", session_path, :method => :delete
     

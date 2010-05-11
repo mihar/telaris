@@ -485,6 +485,72 @@ div.section {
   padding-left: 10px;
   padding-bottom: 10px; }
 
+.post {
+  position: relative;
+  border-bottom: 1px dotted #ccc; }
+  .post .admin {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .post h2 {
+    margin-bottom: 0px; }
+  .post .timestamp {
+    color: #555; }
+
+#abouts-show #contact {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 280px; }
+  #abouts-show #contact .details {
+    margin: 0; }
+    #abouts-show #contact .details p.name {
+      margin-top: 0; }
+    #abouts-show #contact .details .segment {
+      margin: 20px 0; }
+      #abouts-show #contact .details .segment p {
+        margin: 5px 0; }
+#abouts-show .map {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 480px; }
+
+#partners-index .partner {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-bottom: 20px; }
+  #partners-index .partner:hover a.partner_url {
+    display: block; }
+  #partners-index .partner .admin {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  #partners-index .partner a.partner_url {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #000;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-decoration: none !important;
+    background: url(/images/backgrounds/70white.png);
+    font-size: 14px;
+    text-shadow: 0px 1px 1px #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold; }
+
 body {
   position: relative;
   margin-left: auto;
@@ -582,7 +648,7 @@ body {
     text-shadow: 0px 1px 1px #BABABA; }
   #content ol.collection li, #content ul.collection li {
     font-size: 16px;
-    list-style: square inside; }
+    list-style: inside; }
   #content ol#local_nav {
     display: inline-block;
     display: block; }

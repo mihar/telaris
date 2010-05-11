@@ -1,70 +1,82 @@
 <%= title t(".title") %>
+
 <%= @about.send("about_#{current_locale}_html") %>
 
-<div>
-  <%= image_tag "telaris_logo.jpg" %>
-</div>
-<div class="address">
-  <p>
-    <strong>Telaris, trženje laserskih aplikacij, rešitev in sistemov d.o.o.</strong>
-  </p>
-  <p>Otiški vrh 53</p>
-  <p>2373 Šentjanž pri Dravogradu</p>
-  <p>Slovenija</p>
-  <p>T: +386 (0)2 878 51 04</p>
-  <p>F: +386 (0)2 878 51 05</p>
-  <p>M: +386 (0)40 657 574</p>
-  <p>E: info@telaris.si</p>
-  <p>W: http://telaris.si</p>
-</div>
 <div class='map'>
-<script src='http://maps.google.com/maps?file=api&amp;v=2&amp;key=<%= GOOGLE_MAPS_API_KEY %>' type='text/javascript'></script>
-<script type="text/javascript">
-/* <![CDATA[ */
+  <script src='http://maps.google.com/maps?file=api&amp;v=2&amp;key=<%= GOOGLE_MAPS_API_KEY %>' type='text/javascript'></script>
+  <script type="text/javascript">
+  /* <![CDATA[ */
 
-var google_map;
-var google_map_marker_1;
-function google_map_marker_1_infowindow_function() {
-  google_map_marker_1.openInfoWindowHtml("<h4>Naša lokacija<\/h4>\n<div class=\'address\'>\n<strong>Telaris d.o.o.<\/strong>\n<br>\nOtiški vrh 53\n<br>\n2373 Šentjanž pri Dravogradu\n<\/div>\n<p>&nbsp;<\/p>\n")
-}
-function center_google_map() {
-  google_map.checkResize();
-  var google_map_latlng_bounds = new GLatLngBounds();
-google_map_latlng_bounds.extend(new GLatLng(46.561612, 15.0389805));
-google_map.setCenter(google_map_latlng_bounds.getCenter(), 14);
-}
-function initialize_google_map_google_map() {
-  if(GBrowserIsCompatible()) {
-    google_map = new GMap2(document.getElementById('google_map'));
- if (self['GoogleMapOnLoad']) {
-google_map.load = GEvent.addListener(google_map,'load',GoogleMapOnLoad)
-}
-    google_map.setMapType(G_NORMAL_MAP);
-    google_map.addControl(new GSmallZoomControl());
-google_map.addControl(new GScaleControl());
-google_map.addControl(new GMapTypeControl());
-    center_google_map();
-    
-    google_map_marker_1 = new GMarker(new GLatLng(46.561612, 15.0389805));
-GEvent.addListener(google_map_marker_1, 'click', function() {google_map_marker_1_infowindow_function()});
-google_map.addOverlay(google_map_marker_1);
+  var google_map;
+  var google_map_marker_1;
+  function google_map_marker_1_infowindow_function() {
+    google_map_marker_1.openInfoWindowHtml("<h4>Naša lokacija<\/h4>\n<div class=\'address\'>\n<strong>Telaris d.o.o.<\/strong>\n<br>\nOtiški vrh 53\n<br>\n2373 Šentjanž pri Dravogradu\n<\/div>\n<p>&nbsp;<\/p>\n")
+  }
+  function center_google_map() {
+    google_map.checkResize();
+    var google_map_latlng_bounds = new GLatLngBounds();
+  google_map_latlng_bounds.extend(new GLatLng(46.561612, 15.0389805));
+  google_map.setCenter(google_map_latlng_bounds.getCenter(), 14);
+  }
+  function initialize_google_map_google_map() {
+    if(GBrowserIsCompatible()) {
+      google_map = new GMap2(document.getElementById('google_map'));
+   if (self['GoogleMapOnLoad']) {
+  google_map.load = GEvent.addListener(google_map,'load',GoogleMapOnLoad)
+  }
+      google_map.setMapType(G_NORMAL_MAP);
+      google_map.addControl(new GSmallZoomControl());
+  google_map.addControl(new GScaleControl());
+  google_map.addControl(new GMapTypeControl());
+      center_google_map();
 
-google_map.enableDoubleClickZoom();
-google_map.disableContinuousZoom();
-google_map.disableScrollWheelZoom();
+      google_map_marker_1 = new GMarker(new GLatLng(46.561612, 15.0389805));
+  GEvent.addListener(google_map_marker_1, 'click', function() {google_map_marker_1_infowindow_function()});
+  google_map.addOverlay(google_map_marker_1);
+
+  google_map.enableDoubleClickZoom();
+  google_map.disableContinuousZoom();
+  google_map.disableScrollWheelZoom();
+    }
   }
-}
-if (typeof window.onload != 'function') {
-  window.onload = initialize_google_map_google_map;
-} else {
-  old_before_google_map_google_map = window.onload;
-  window.onload = function() {
-    old_before_google_map_google_map();
-    initialize_google_map_google_map();
+  if (typeof window.onload != 'function') {
+    window.onload = initialize_google_map_google_map;
+  } else {
+    old_before_google_map_google_map = window.onload;
+    window.onload = function() {
+      old_before_google_map_google_map();
+      initialize_google_map_google_map();
+    }
   }
-}
-/* ]]> */</script> 
-<div id='map' style="height: 400px;"><div id='google_map' style='width: 100%; height: 100%'></div></div>
+  /* ]]> */</script> 
+  <div id='map' style="height: 400px;"><div id='google_map' style='width: 100%; height: 100%'></div></div>
+</div>
+
+<div id="contact">
+  <!-- <div>
+    <%= image_tag "telaris_logo.jpg" %>
+  </div> -->
+  <div class="details">
+    <p class="name">
+      <strong>Telaris, trženje laserskih aplikacij, rešitev in sistemov d.o.o.</strong>
+    </p>
+    <div class="segment address">
+      <p>Otiški vrh 53</p>
+      <p>2373 Šentjanž pri Dravogradu</p>
+      <p>Slovenija</p>      
+    </div>
+    <div class="segment phone">
+      <p>T: +386 (0)2 878 51 04</p>
+      <p>F: +386 (0)2 878 51 05</p>
+      <p>M: +386 (0)40 657 574</p>      
+    </div>
+    <div class="segment web">
+      <p>E: info@telaris.si</p>
+      <p>W: http://telaris.si</p>      
+    </div>
+  </div>
+  
+   
 </div>
 
 <% admin_section do %>

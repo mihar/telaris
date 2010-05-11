@@ -1,8 +1,5 @@
-.partner
-  - if partner.logo.file?
-    - link_to partner.url do
-      = image_tag partner.logo.url(:small)
-  %h2= link_to partner, partner.url
-  
-  - admin_section do 
-    = link_to "Uredi", edit_resource_path(partner)
+- if partner.logo.file?
+  .partner{:style => "background: url(#{partner.logo.url(:small)}) center center no-repeat"}
+    = link_to partner.name, partner.url, :class => "partner_url"
+    - admin_section do 
+      = link_to "Uredi", edit_resource_path(partner)

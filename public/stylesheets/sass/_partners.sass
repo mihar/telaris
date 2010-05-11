@@ -1,0 +1,32 @@
+#partners-index
+  .partner
+    :position relative
+    :width 100px
+    :height 100px
+    :float left
+    :margin
+      :bottom 20px
+    &:hover
+      a.partner_url
+        :display block
+    .admin
+      :position absolute
+      :right 0
+      :top 0
+    a.partner_url
+      :position absolute
+      :display none
+      :top 0
+      :left 0
+      :text-align center
+      :color #000
+      :width 100px
+      :height 100px
+      :line-height 100px
+      :text-decoration none !important
+      :background url(/images/backgrounds/70white.png)
+      +small_text
+      +crisp_shadow
+      +sans
+      +bold
+      
