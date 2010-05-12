@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100511181049) do
+ActiveRecord::Schema.define(:version => 20100512213421) do
 
   create_table "abouts", :force => true do |t|
     t.text     "about_sl"
@@ -139,10 +139,26 @@ ActiveRecord::Schema.define(:version => 20100511181049) do
     t.text     "system_en"
     t.text     "system_hr"
     t.text     "system_sr"
+    t.text     "system_sl_html"
+    t.text     "system_en_html"
+    t.text     "system_hr_html"
+    t.text     "system_sr_html"
     t.string   "system_photo_file_name"
     t.string   "system_photo_content_type"
     t.integer  "system_photo_file_size"
     t.datetime "system_photo_updated_at"
+    t.string   "technical_photo_file_name"
+    t.string   "technical_photo_content_type"
+    t.integer  "technical_photo_file_size"
+    t.datetime "technical_photo_updated_at"
+    t.text     "technical_sl"
+    t.text     "technical_en"
+    t.text     "technical_hr"
+    t.text     "technical_sr"
+    t.text     "technical_sl_html"
+    t.text     "technical_en_html"
+    t.text     "technical_hr_html"
+    t.text     "technical_sr_html"
   end
 
 end

@@ -75,4 +75,8 @@ module LinkHelper
   def link_to_span(text, url)
     link_to content_tag(:span, text), url
   end
+  
+  def link_to_local_lang(caption, lang)
+    link_to content_tag(:span, caption), "##{lang}", :class => lang
+  end
 end

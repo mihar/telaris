@@ -5,6 +5,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :inquiries, :collection => {:successful => :get}
   map.resources :posts
   
+  map.resources :photos, :only => :destroy
+  
   map.resources :partners do |partner|
     partner.resources :photos, :only => [:new, :create, :destroy]
   end

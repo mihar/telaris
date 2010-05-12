@@ -41,6 +41,13 @@ sl:
       title: "Poizvedba"
       instructions: "Na vaša vprašanja Vam bomo z veseljem odgovorili. Izpolnite spodnji formular in naš odgovor boste prejeli v najkrajšem možnem času."
       mandatory: "Polja označena z * morajo biti obvezno izpolnjena!"
+      
+  products:
+    technical: "Tehnični podatki"
+    type_table: "Tipi"
+    safety_table: "Varnostni razredi"
+    basic_table: "Osnovni podatki"
+    system: "Sistem"
   
   date:
     formats:

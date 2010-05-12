@@ -1,0 +1,60 @@
+%a{:name => l}
+%div{:class => "lang #{l}"}
+  %h2= t("head.language_#{l}")
+  
+  %ol#local_nav
+    %li= link_to_local "Naziv", "name_#{l}"
+    %li= link_to_local "Besedilo", "body_#{l}"
+    %li= link_to_local "Tabela tipov", "type_table_#{l}"
+    %li= link_to_local "Tabela var. raz.", "safety_table_#{l}"
+    %li= link_to_local "Tabela osn. pod.", "basic_table_#{l}"
+    %li= link_to_local "Foto", "photos"
+  
+
+  %a{:name => "name_#{l}"}
+  %fieldset
+    %legend Naziv
+    .half.first
+      .question= f.label "name_#{l}", "Naziv"
+      .answer= f.text_field "name_#{l}"
+    .half.second
+      .question= f.label "pitch_#{l}", "Pitch"
+      .answer.pitch= f.text_area "pitch_#{l}", :rows => 2
+    
+    
+    = link_to_top
+
+  %a{:name => "body_#{l}"}
+  %fieldset
+    %legend Besedilo
+    .half.first
+      .question= f.label "summary_#{l}", "Povzetek"
+      .answer= f.text_area "summary_#{l}"
+      .question= f.label "body_#{l}", "Opis produkta"
+      .answer= f.text_area "body_#{l}"
+    .half.second
+      .question= f.label "technical_#{l}", "Tehnični opis"
+      .answer= f.text_area "technical_#{l}"
+      .question= f.label "system_#{l}", "Opis sistema"
+      .answer= f.text_area "system_#{l}"
+    = link_to_top
+    
+
+  %a{:name => "type_table_#{l}"}
+  %fieldset 
+    %legend Tabela tipov
+    = f.tinymce "type_table_#{l}"
+    = link_to_top
+  
+    
+  %a{:name => "safety_table_#{l}"}
+  %fieldset 
+    %legend Tabela varnostnih razredov
+    = f.tinymce "safety_table_#{l}"
+    = link_to_top
+
+  %a{:name => "basic_table_#{l}"}
+  %fieldset.basic_table
+    %legend Tabela osnovnih podatkov
+    = f.tinymce "basic_table_#{l}"
+    = link_to_top

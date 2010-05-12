@@ -66,6 +66,33 @@ form
       .to_top
         :display table !important
     
+    .photo
+      label 
+        :display block
+        :clear both
+      .image
+        :float left
+        :margin 5px 0
+          :right 5px
+        :position relative
+        a
+          :display none
+          :position absolute
+          :left 0
+          :top 0
+          :background url(/images/backgrounds/50black.png)
+          :color #fff !important
+          :width 35px
+          :height 35px
+          :text-align center
+          :line-height 35px
+          +sans
+          +bold
+        &:hover
+          a
+            :display block
+            :text-decoration none !important
+    
 .errorExplanation
   :padding-bottom = !gutter + "px"
   :margin-bottom = !gutter + "px"

@@ -2,3 +2,92 @@
   .product
     +wrapper(7)
   
+  
+#products-new, #products-edit, #products-create, #products-update
+  #local_lang
+    :position absolute
+    :top 0
+    :right 0
+    li
+      :list-style none
+      :float left
+      &.caption
+        :margin-right 5px
+        :line-height 26px
+        +sans
+        +bold
+        +ultra_small_text
+        +lite_shadow
+      a
+        :width 30px
+        :height 26px
+        :margin-left 5px
+        &.active
+          :display none
+        &:hover
+          :background #aaa
+        &.sl
+          :background-image url(/images/flags/si.png)
+          :background-repeat no-repeat
+          :background-position center center
+        &.en                                         
+          :background-image url(/images/flags/en.png)
+          :background-repeat no-repeat
+          :background-position center center
+        &.sr                                         
+          :background-image url(/images/flags/sr.png)
+          :background-repeat no-repeat
+          :background-position center center
+        &.hr                                         
+          :background-image url(/images/flags/hr.png)
+          :background-repeat no-repeat
+          :background-position center center
+        :display table
+        :background-color #fff
+        :border 1px solid #bababa
+        +radius
+        span
+          :display none
+  form
+    :clear both
+    fieldset
+      .pitch textarea
+        :height 36px
+      .photo
+        +wrapper(5)
+      &.basic_table
+        :padding-bottom 40px
+        :border-bottom 1px solid #999
+        
+      .second
+        +prepend(1)
+        
+    fieldset.submit
+      +radius
+      :padding 5px
+      :background #eee
+      em
+        :visibility hidden
+      &:hover
+        em
+          :padding-left 10px
+          :visibility visible
+          :color #666
+          +sans
+          +lite_shadow
+          +ultra_small_text
+          :font-style normal
+      
+  
+    h2
+      :display table
+      :padding-right 30px
+    .sl h2
+      :background url(/images/flags/si.png) no-repeat right center
+    .en h2
+      :background url(/images/flags/en.png) no-repeat right center
+    .hr h2
+      :background url(/images/flags/hr.png) no-repeat right center
+    .sr h2
+      :background url(/images/flags/sr.png) no-repeat right center
+      

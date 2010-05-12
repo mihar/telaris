@@ -304,6 +304,13 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     #content>.admin a {
       float: right; }
 
+#content .tinymce {
+  width: 100% !important;
+  height: 350px !important; }
+#content .mceLayout table td {
+  padding: 0;
+  margin: 0; }
+
 form .half.first {
   display: inline;
   float: left;
@@ -410,6 +417,30 @@ form fieldset {
     z-index: 999; }
   form fieldset:hover .to_top {
     display: table !important; }
+  form fieldset .photo label {
+    display: block;
+    clear: both; }
+  form fieldset .photo .image {
+    float: left;
+    margin: 5px 0;
+    margin-right: 5px;
+    position: relative; }
+    form fieldset .photo .image a {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url(/images/backgrounds/50black.png);
+      color: #fff !important;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: bold; }
+    form fieldset .photo .image:hover a {
+      display: block;
+      text-decoration: none !important; }
 
 .errorExplanation {
   padding-bottom: 20px;
@@ -612,6 +643,108 @@ div.section {
   * html #products-index .product {
     height: 1%; }
 
+#products-new #local_lang, #products-edit #local_lang, #products-create #local_lang, #products-update #local_lang {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  #products-new #local_lang li, #products-edit #local_lang li, #products-create #local_lang li, #products-update #local_lang li {
+    list-style: none;
+    float: left; }
+    #products-new #local_lang li.caption, #products-edit #local_lang li.caption, #products-create #local_lang li.caption, #products-update #local_lang li.caption {
+      margin-right: 5px;
+      line-height: 26px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+      text-shadow: 0px 1px 1px #DDD; }
+    #products-new #local_lang li a, #products-edit #local_lang li a, #products-create #local_lang li a, #products-update #local_lang li a {
+      width: 30px;
+      height: 26px;
+      margin-left: 5px;
+      display: table;
+      background-color: #fff;
+      border: 1px solid #bababa;
+      border-radius: 7px;
+      -moz-border-radius: 7px;
+      -webkit-border-radius: 7px; }
+      #products-new #local_lang li a.active, #products-edit #local_lang li a.active, #products-create #local_lang li a.active, #products-update #local_lang li a.active {
+        display: none; }
+      #products-new #local_lang li a:hover, #products-edit #local_lang li a:hover, #products-create #local_lang li a:hover, #products-update #local_lang li a:hover {
+        background: #aaa; }
+      #products-new #local_lang li a.sl, #products-edit #local_lang li a.sl, #products-create #local_lang li a.sl, #products-update #local_lang li a.sl {
+        background-image: url(/images/flags/si.png);
+        background-repeat: no-repeat;
+        background-position: center center; }
+      #products-new #local_lang li a.en, #products-edit #local_lang li a.en, #products-create #local_lang li a.en, #products-update #local_lang li a.en {
+        background-image: url(/images/flags/en.png);
+        background-repeat: no-repeat;
+        background-position: center center; }
+      #products-new #local_lang li a.sr, #products-edit #local_lang li a.sr, #products-create #local_lang li a.sr, #products-update #local_lang li a.sr {
+        background-image: url(/images/flags/sr.png);
+        background-repeat: no-repeat;
+        background-position: center center; }
+      #products-new #local_lang li a.hr, #products-edit #local_lang li a.hr, #products-create #local_lang li a.hr, #products-update #local_lang li a.hr {
+        background-image: url(/images/flags/hr.png);
+        background-repeat: no-repeat;
+        background-position: center center; }
+      #products-new #local_lang li a span, #products-edit #local_lang li a span, #products-create #local_lang li a span, #products-update #local_lang li a span {
+        display: none; }
+#products-new form, #products-edit form, #products-create form, #products-update form {
+  clear: both; }
+  #products-new form fieldset .pitch textarea, #products-edit form fieldset .pitch textarea, #products-create form fieldset .pitch textarea, #products-update form fieldset .pitch textarea {
+    height: 36px; }
+  #products-new form fieldset .photo, #products-edit form fieldset .photo, #products-create form fieldset .photo, #products-update form fieldset .photo {
+    display: inline;
+    float: left;
+    width: 250px;
+    display: inline-block;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0; }
+    #products-new form fieldset .photo:after, #products-edit form fieldset .photo:after, #products-create form fieldset .photo:after, #products-update form fieldset .photo:after {
+      clear: both;
+      content: ' ';
+      display: block;
+      font-size: 0;
+      line-height: 0;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    * html #products-new form fieldset .photo, * html #products-edit form fieldset .photo, * html #products-create form fieldset .photo, * html #products-update form fieldset .photo {
+      height: 1%; }
+  #products-new form fieldset.basic_table, #products-edit form fieldset.basic_table, #products-create form fieldset.basic_table, #products-update form fieldset.basic_table {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #999; }
+  #products-new form fieldset .second, #products-edit form fieldset .second, #products-create form fieldset .second, #products-update form fieldset .second {
+    padding-left: 50px; }
+  #products-new form fieldset.submit, #products-edit form fieldset.submit, #products-create form fieldset.submit, #products-update form fieldset.submit {
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    padding: 5px;
+    background: #eee; }
+    #products-new form fieldset.submit em, #products-edit form fieldset.submit em, #products-create form fieldset.submit em, #products-update form fieldset.submit em {
+      visibility: hidden; }
+    #products-new form fieldset.submit:hover em, #products-edit form fieldset.submit:hover em, #products-create form fieldset.submit:hover em, #products-update form fieldset.submit:hover em {
+      padding-left: 10px;
+      visibility: visible;
+      color: #666;
+      font-family: Helvetica, Arial, sans-serif;
+      text-shadow: 0px 1px 1px #DDD;
+      font-size: 12px;
+      font-style: normal; }
+  #products-new form h2, #products-edit form h2, #products-create form h2, #products-update form h2 {
+    display: table;
+    padding-right: 30px; }
+  #products-new form .sl h2, #products-edit form .sl h2, #products-create form .sl h2, #products-update form .sl h2 {
+    background: url(/images/flags/si.png) no-repeat right center; }
+  #products-new form .en h2, #products-edit form .en h2, #products-create form .en h2, #products-update form .en h2 {
+    background: url(/images/flags/en.png) no-repeat right center; }
+  #products-new form .hr h2, #products-edit form .hr h2, #products-create form .hr h2, #products-update form .hr h2 {
+    background: url(/images/flags/hr.png) no-repeat right center; }
+  #products-new form .sr h2, #products-edit form .sr h2, #products-create form .sr h2, #products-update form .sr h2 {
+    background: url(/images/flags/sr.png) no-repeat right center; }
+
 body {
   position: relative;
   margin-left: auto;
@@ -619,7 +752,7 @@ body {
   width: 800px;
   display: inline-block;
   display: block;
-  background: url(/images/backgrounds/cccTOfff.png) repeat-x fixed; }
+  background: url(/images/backgrounds/body_gradient.png) repeat-x fixed; }
   body:after {
     clear: both;
     content: ' ';
