@@ -381,7 +381,9 @@ form div.submit {
     border-bottom: 2px solid #efefef; }
 form textarea {
   width: 350px;
-  height: 150px; }
+  height: 150px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px; }
   form textarea.long {
     height: 350px; }
 form legend {
@@ -452,30 +454,31 @@ form fieldset {
   .errorExplanation h2 {
     font-size: 20px; }
 
-#content table td, #content table th a, #content table th span {
+#content table td, #content table th {
   padding: 0;
   padding-top: 5px;
   padding-right: 22.5px;
   padding-left: 2.5px;
   vertical-align: middle; }
-#content table thead tr th a, #content table thead tr th span {
+#content table thead tr th {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
-  display: block;
   text-align: left;
   border-bottom: 2px solid #eee;
   color: #000;
   white-space: nowrap; }
-#content table thead tr th a:hover {
-  background-color: #efefef; }
-#content table thead tr th a.ascending, #content table thead tr th a.descending {
-  background-color: #efefef;
-  background-position: right center;
-  background-repeat: no-repeat; }
-#content table thead tr th a.ascending {
-  background-image: url(/images/ui/ascending.png); }
-#content table thead tr th a.descending {
-  background-image: url(/images/ui/descending.png); }
+  #content table thead tr th.rowspan {
+    border-bottom: 0; }
+  #content table thead tr th a:hover {
+    background-color: #efefef; }
+  #content table thead tr th a.ascending, #content table thead tr th a.descending {
+    background-color: #efefef;
+    background-position: right center;
+    background-repeat: no-repeat; }
+  #content table thead tr th a.ascending {
+    background-image: url(/images/ui/ascending.png); }
+  #content table thead tr th a.descending {
+    background-image: url(/images/ui/descending.png); }
 #content table tbody tr:hover td {
   background: #efefef; }
 #content table tbody tr td {
@@ -642,6 +645,47 @@ div.section {
     height: 0; }
   * html #products-index .product {
     height: 1%; }
+
+#products-show .tables {
+  margin-top: 75px;
+  background: url(/images/backgrounds/DDDtoFFF.png) repeat-x;
+  position: relative;
+  padding: 1px 10px;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0; }
+  #products-show .tables #table_nav {
+    position: absolute;
+    top: -60px;
+    left: 0; }
+    #products-show .tables #table_nav li {
+      list-style: none;
+      float: left; }
+      #products-show .tables #table_nav li a {
+        display: table;
+        padding: 10px;
+        color: #000;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        text-shadow: 0px 1px 1px #DDD;
+        border-radius: 7px;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius-bottomright: 0;
+        -webkit-border-bottom-right-radius: 0;
+        -moz-border-radius-bottomleft: 0;
+        -webkit-border-bottom-left-radius: 0; }
+      #products-show .tables #table_nav li.active a {
+        background: rgb(221, 221, 221); }
+  #products-show .tables h3 {
+    display: none; }
+  #products-show .tables .table {
+    display: none; }
+    #products-show .tables .table.active {
+      display: block; }
 
 #products-new #local_lang, #products-edit #local_lang, #products-create #local_lang, #products-update #local_lang {
   position: absolute;

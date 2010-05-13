@@ -1,3 +1,4 @@
+- javascripts "products-show"
 = title @product.send("name_#{current_locale}")
 
 .visual= render @product.photos
@@ -16,17 +17,30 @@
   - if @product.technical_photo.file?
     .photo= image_tag @product.technical_photo.url
     
-  - if type_table = @product.send("type_table_#{current_locale}")
-    %h3= t("products.type_table")
-    .type_table= type_table
-
-  - if safety_table = @product.send("safety_table_#{current_locale}")
-    %h3= t("products.safety_table")
-    .safety_table= safety_table
-
-  - if basic_table = @product.send("basic_table_#{current_locale}")
-    %h3= t("products.basic_table")
-    .basic_table= basic_table
+  .tables
+    %ul#table_nav
+      - if type_table = @product.send("type_table_#{current_locale}")
+        %li.active= link_to_anchor t("products.type_table"), "type_table"
+      - if safety_table = @product.send("safety_table_#{current_locale}")
+        %li= link_to_anchor t("products.safety_table"), "safety_table"
+      - if basic_table = @product.send("basic_table_#{current_locale}")
+        %li= link_to_anchor t("products.basic_table"), "basic_table"
+    
+    .table.type_table.active
+      - if type_table
+        %a{:name => "type_table"}
+        %h3= t("products.type_table")
+        .type_table= type_table
+    .table.safety_table
+      - if safety_table
+        %a{:name => "safety_table"}
+        %h3= t("products.safety_table")
+        .safety_table= safety_table
+    .table.basic_table
+      - if basic_table
+        %a{:name => "basic_table"}
+        %h3= t("products.basic_table")
+        .basic_table= basic_table
 
 - if @product.system_photo.file? or @product.send("system_#{current_locale}?")
   %h2= t("products.system")

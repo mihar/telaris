@@ -1,6 +1,6 @@
 #content
   table
-    td, th a, th span
+    td, th
       :padding 0
         :top 5px
         :right 22.5px
@@ -9,14 +9,14 @@
     thead
       tr
         th
-          a, span
-            +sans
-            +mid_text
-            :display block
-            :text-align left
-            :border-bottom 2px solid #eee          
-            :color #000
-            :white-space nowrap
+          +sans
+          +mid_text
+          :text-align left
+          :border-bottom 2px solid #eee          
+          :color #000
+          :white-space nowrap
+          &.rowspan
+            :border-bottom 0
           a
             &:hover
               :background-color = !lite_gray

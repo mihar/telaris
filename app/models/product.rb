@@ -12,7 +12,7 @@ class Product < ActiveRecord::Base
 
   
   
-  formats_attributes :body_sl, :body_en, :body_hr, :body_sr, :abstract_sl, :abstract_en, :abstract_hr, :abstract_sr, :system_sl, :system_en, :system_hr, :system_sr, :technical_sl, :technical_en, :technical_hr, :technical_sr
+  formats_attributes :body_sl, :body_en, :body_hr, :body_sr, :abstract_sl, :abstract_en, :abstract_hr, :abstract_sr, :system_sl, :system_en, :system_hr, :system_sr, :technical_sl, :technical_en, :technical_hr, :technical_sr, :summary_sl, :summary_en, :summary_hr, :summary_sr
   
   def photo
     photos.first.photo unless photos.empty?

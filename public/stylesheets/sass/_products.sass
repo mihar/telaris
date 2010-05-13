@@ -1,7 +1,47 @@
 #products-index
   .product
     +wrapper(7)
-  
+
+#products-show
+  .tables
+    :margin-top 75px
+    :background url(/images/backgrounds/DDDtoFFF.png) repeat-x
+    :position relative
+    :padding 1px 10px
+    +radius
+    :-moz-border-radius-topleft 0
+    :-webkit-border-top-left-radius 0
+    #table_nav
+      :position absolute
+      :top -60px
+      :left 0
+      li
+        :list-style none
+        :float left
+        a
+          :display table
+          :padding 10px
+          :color #000
+          +sans
+          +bold
+          +small_text
+          +lite_shadow
+          +radius
+          :-moz-border-radius-bottomright 0
+          :-webkit-border-bottom-right-radius 0
+          :-moz-border-radius-bottomleft 0
+          :-webkit-border-bottom-left-radius 0
+        &.active
+          a
+            :background rgb(221, 221, 221)
+          
+          
+    h3
+      :display none
+    .table
+      :display none
+      &.active
+        :display block
   
 #products-new, #products-edit, #products-create, #products-update
   #local_lang
@@ -90,4 +130,3 @@
       :background url(/images/flags/hr.png) no-repeat right center
     .sr h2
       :background url(/images/flags/sr.png) no-repeat right center
-      
