@@ -1,0 +1,23 @@
+= error_messages_for :addon
+
+- form_for [resource.addon_category, resource], :html => {:multipart => true} do |f|
+  %fieldset
+    %legend Naziv
+    = f.text_field :name
+    
+  %fieldset
+    %legend Opis
+    = lang_specific_field f, :body, "Opis", :text_area
+  
+  %fieldset
+    %legend Povezava
+    = f.text_field :url
+    
+  %fieldset
+    %legend Fotografija
+    - if resource.image.file?
+      = image_tag resource.image.url(:square)
+    = f.file_field :image
+    
+  %fieldset.submit
+    = f.submit :Shrani

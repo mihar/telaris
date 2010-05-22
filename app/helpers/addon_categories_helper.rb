@@ -1,0 +1,2 @@
+module AddonCategoriesHelper
+end

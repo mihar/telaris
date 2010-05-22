@@ -1,0 +1,7 @@
+.category
+  %h2= addon_category.send("name_#{current_locale}")
+  %ul= render addon_category.addons
+  
+  - admin_section do
+    = link_to "Uredi", edit_addon_category_path(addon_category)
+    = link_to "Dodaj opremo", new_addon_category_addon_path(addon_category)

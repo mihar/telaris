@@ -1,8 +1,107 @@
+=tab_nav
+  :position absolute
+  :top -60px
+  :left 0
+  li
+    :list-style none
+    :float left
+    a
+      :display table
+      :padding 10px 20px
+      :color #000
+      +sans
+      +bold
+      +small_text
+      +mid_shadow
+      +radius
+      :-moz-border-radius-bottomright 0
+      :-webkit-border-bottom-right-radius 0
+      :-moz-border-radius-bottomleft 0
+      :-webkit-border-bottom-left-radius 0
+    &.active
+      a
+        :background rgb(221, 221, 221)
+
 #products-index
   .product
     +wrapper(7)
+    .image
+      +column(3)
+      img
+        +radius
+    .text
+      +column(4)
+      a
+        :display block
+        :margin 0
+          :bottom 10px
+        :color #000
+        +sans
+        +large_text
+        +bold
+        +mid_shadow
+      ul
+        :margin 0
+    
 
 #products-show
+  .pitch
+    +mid_text
+    +sans
+  .visual_body
+    +clearfix
+    .body
+      +wrapper(8)
+    .visual
+      +wrapper(7)
+      :margin-top 20px
+      .large
+        +clearfix
+      .small
+        +clearfix
+        :margin-top 10px
+      img
+        :float right
+  #addons
+    .addons
+      :position relative
+      #addon_nav
+        +tab_nav
+      .addon_category
+        :margin-top 75px
+        :background url(/images/backgrounds/DDDtoFFF.png) repeat-x
+        :position relative
+        :padding 1px 10px
+        +radius
+        :-moz-border-radius-topleft 0
+        :-webkit-border-top-left-radius 0
+        +clearfix
+        :display none
+        &.active
+          :display block
+        h3
+          :display none
+        .addons_wrapper
+          :background #fff
+          :margin-top 10px
+          :padding 10px
+          +clearfix
+          .addon
+            +wrapper(7)
+            .image, h4
+              :float left
+            h4
+              :margin 0
+                :left 10px
+              :line-height 40px
+              a
+                :color #000
+            .body
+              :clear both
+              :margin-right 20px
+              +textilize
+
+  .technical_photo_and_text
   .tables
     :margin-top 75px
     :background url(/images/backgrounds/DDDtoFFF.png) repeat-x
@@ -12,34 +111,15 @@
     :-moz-border-radius-topleft 0
     :-webkit-border-top-left-radius 0
     #table_nav
-      :position absolute
-      :top -60px
-      :left 0
-      li
-        :list-style none
-        :float left
-        a
-          :display table
-          :padding 10px
-          :color #000
-          +sans
-          +bold
-          +small_text
-          +lite_shadow
-          +radius
-          :-moz-border-radius-bottomright 0
-          :-webkit-border-bottom-right-radius 0
-          :-moz-border-radius-bottomleft 0
-          :-webkit-border-bottom-left-radius 0
-        &.active
-          a
-            :background rgb(221, 221, 221)
-          
+      +tab_nav          
           
     h3
       :display none
     .table
       :display none
+      :background #fff
+      :padding 1px 10px
+      :margin 10px 0
       &.active
         :display block
   

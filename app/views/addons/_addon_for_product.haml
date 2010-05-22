@@ -1,0 +1,4 @@
+.addon
+  .image= image_tag addon_for_product.image.url(:small_square)
+  %h4= link_to addon_for_product.name, addon_for_product.url
+  .body= addon_for_product.send("body_#{current_locale}_html")

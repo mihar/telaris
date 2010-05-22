@@ -1,0 +1,38 @@
+#addon_categories-index
+  .category_row
+    +clearfix
+    :margin-bottom 20px
+    .category
+      :position relative
+      +wrapper(6)
+      +suffix(1)
+      +clearfix
+      .admin
+        :position absolute
+        :top 7px
+        :right 0
+      h2
+        :margin-top 0
+      ul
+        li
+          :position relative
+          :clear both
+          :list-style none
+          .image
+            :float left
+            :margin-right 10px
+          h3
+            +small_text
+            :margin 0
+            :line-height 20px
+          p
+            +ultra_small_text
+            :margin 0
+            :float left
+            :color #333
+          .admin
+            :position absolute
+            :top 0
+            :right 0
+            :margin 0
+  

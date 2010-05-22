@@ -18,6 +18,19 @@
   = render :partial => "fields_for_lang", :locals => {:f => f, :l => "en"}
   = render :partial => "fields_for_lang", :locals => {:f => f, :l => "hr"}
   = render :partial => "fields_for_lang", :locals => {:f => f, :l => "sr"}
+  
+  %a{:name => "addons"}
+  %fieldset.addons
+    %legend Dodatna oprema
+    - AddonCategory.all.each do |ac|
+      %h3= ac.send("name_sl")
+      %ul
+        - ac.addons.each do |a|
+          %li
+            %label
+              = a
+              = check_box_tag "product[addon_ids][]", a.id, resource.addons.include?(a)
+      
 
   %a{:name => "photos"}
   %fieldset.photos

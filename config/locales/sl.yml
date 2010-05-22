@@ -5,6 +5,7 @@ sl:
     about: "Podjetje"
     partners: "Partnerji"
     offer: "Ponudba"
+    addons: "Dodatna oprema"
     inquiries: "Poizvedba"
     
   site:
@@ -43,11 +44,16 @@ sl:
       mandatory: "Polja označena z * morajo biti obvezno izpolnjena!"
       
   products:
+    addons: "Dodatna oprema"
     technical: "Tehnični podatki"
     type_table: "Tipi"
     safety_table: "Varnostni razredi"
     basic_table: "Osnovni podatki"
     system: "Sistem"
+    
+  addon_categories:
+    index:
+      title: "Dodatna oprema"
   
   date:
     formats:

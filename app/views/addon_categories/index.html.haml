@@ -1,0 +1,5 @@
+= title t(".title")
+= render :partial => "category_row", :collection => @addon_categories
+
+- admin_section do
+  = link_to "Nova kategorija", new_addon_category_path

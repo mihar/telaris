@@ -1,3 +1,12 @@
+=th
+  +sans
+  +mid_text
+  :text-align left
+  :border-bottom 2px solid #eee          
+  :color #000
+  :white-space nowrap
+  &.rowspan
+    :border-bottom 0
 #content
   table
     td, th
@@ -9,14 +18,7 @@
     thead
       tr
         th
-          +sans
-          +mid_text
-          :text-align left
-          :border-bottom 2px solid #eee          
-          :color #000
-          :white-space nowrap
-          &.rowspan
-            :border-bottom 0
+          +th
           a
             &:hover
               :background-color = !lite_gray
@@ -34,6 +36,10 @@
         &:hover
           td
             :background = !lite_gray
+        th
+          +th
+          :border-bottom-width 1px
+          
         td
           :border-bottom 1px solid #eee
           .user

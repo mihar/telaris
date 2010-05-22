@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100512213421) do
+ActiveRecord::Schema.define(:version => 20100521143322) do
 
   create_table "abouts", :force => true do |t|
     t.text     "about_sl"
@@ -22,6 +22,40 @@ ActiveRecord::Schema.define(:version => 20100512213421) do
     t.text     "about_sr_html"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "addon_categories", :force => true do |t|
+    t.string   "name_sl"
+    t.string   "name_en"
+    t.string   "name_hr"
+    t.string   "name_sr"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "addons", :force => true do |t|
+    t.string   "name"
+    t.text     "body_sl"
+    t.text     "body_sl_html"
+    t.text     "body_en"
+    t.text     "body_en_html"
+    t.text     "body_hr"
+    t.text     "body_hr_html"
+    t.text     "body_sr"
+    t.text     "body_sr_html"
+    t.string   "url"
+    t.integer  "addon_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "addons_products", :id => false, :force => true do |t|
+    t.integer "addon_id"
+    t.integer "product_id"
   end
 
   create_table "categories", :force => true do |t|
@@ -44,6 +78,36 @@ ActiveRecord::Schema.define(:version => 20100512213421) do
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "equipment", :force => true do |t|
+    t.string   "name"
+    t.text     "body_sl"
+    t.text     "body_sl_html"
+    t.text     "body_en"
+    t.text     "body_en_html"
+    t.text     "body_hr"
+    t.text     "body_hr_html"
+    t.text     "body_sr"
+    t.text     "body_sr_html"
+    t.string   "url"
+    t.integer  "equipment_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "equipment_categories", :force => true do |t|
+    t.string   "name_sl"
+    t.string   "name_en"
+    t.string   "name_hr"
+    t.string   "name_sr"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "equipment_products", :id => false, :force => true do |t|
+    t.integer "equipment_id"
+    t.integer "product_id"
   end
 
   create_table "inquiries", :force => true do |t|

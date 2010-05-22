@@ -1,0 +1,7 @@
+= title "Urejanje opreme"
+
+- admin_section do
+  = link_to "Odstrani", [resource.addon_category, resource], :method => :delete, :confirm => destroy_confirmation(resource)
+
+= render "form"
+= link_to_back addon_categories_path

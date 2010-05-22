@@ -10,8 +10,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :partners do |partner|
     partner.resources :photos, :only => [:new, :create, :destroy]
   end
+
+  map.resources :addon_categories, :except => :show do |addon_category|
+    addon_category.resources :addons, :except => [:index, :show]
+  end
   
-  map.resources :categories do |category|
+  map.resources :categories, :except => :show do |category|
     category.resources :products
   end
 

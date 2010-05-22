@@ -1,0 +1,9 @@
+= error_messages_for :addon_category
+
+- form_for resource do |f|
+  %fieldset
+    %legend Naziv
+    = lang_specific_field f, :name, "Naziv"
+    
+  %fieldset.submit
+    = f.submit :Shrani

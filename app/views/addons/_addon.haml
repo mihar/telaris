@@ -1,0 +1,9 @@
+%li
+  - if addon.image.file?
+    .image= image_tag addon.image.url(:small_square)
+  %h3= addon
+  - unless addon.products.empty?
+    %p= addon.products.map { |product| link_to product.send("name_#{current_locale}"), [product.category, product] }.join(", ")
+  
+  - admin_section do
+    = link_to "Uredi", edit_addon_category_addon_path(addon.addon_category, addon)

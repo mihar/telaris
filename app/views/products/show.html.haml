@@ -1,46 +1,60 @@
 - javascripts "products-show"
 = title @product.send("name_#{current_locale}")
 
-.visual= render @product.photos
+/ Conditions
+- if @product.send("type_table_#{current_locale}?")
+  - type_table = @product.send("type_table_#{current_locale}")
+- if @product.send("safety_table_#{current_locale}?") 
+  - safety_table = @product.send("safety_table_#{current_locale}")
+- if @product.send("basic_table_#{current_locale}?")
+  - basic_table = @product.send("basic_table_#{current_locale}")
+- if @product.send("technical_#{current_locale}?") 
+  - technical = @product.send("technical_#{current_locale}_html")
 
 - if pitch = @product.send("pitch_#{current_locale}")
   .pitch= pitch
-  
-.body= @product.send("body_#{current_locale}_html")
 
-.technical
-  %h2= t("products.technical")
+.visual_body
+  .body= @product.send("body_#{current_locale}_html")
+  .visual
+    - unless @product.photos.empty?
+      .large= render :partial => "photos/large_photo", :object => @product.photo
+      .small= render @product.other_photos(@product.photo)
+
+- if type_table or safety_table or basic_table or technical
+  .technical
+    %h2= t("products.technical")
   
-  - if @product.send("technical_#{current_locale}?") and technical = @product.send("technical_#{current_locale}_html")
-    .body= technical
-  
-  - if @product.technical_photo.file?
-    .photo= image_tag @product.technical_photo.url
+    .technical_photo_and_text
+      - if @product.technical_photo.file?
+        .photo= image_tag @product.technical_photo.url
+      - if technical
+        .body= technical
+
+    .tables
+      %ul#table_nav
+        - if type_table
+          %li.active= link_to_anchor t("products.type_table"), "type_table"
+        - if safety_table
+          %li= link_to_anchor t("products.safety_table"), "safety_table"
+        - if basic_table
+          %li= link_to_anchor t("products.basic_table"), "basic_table"
     
-  .tables
-    %ul#table_nav
-      - if type_table = @product.send("type_table_#{current_locale}")
-        %li.active= link_to_anchor t("products.type_table"), "type_table"
-      - if safety_table = @product.send("safety_table_#{current_locale}")
-        %li= link_to_anchor t("products.safety_table"), "safety_table"
-      - if basic_table = @product.send("basic_table_#{current_locale}")
-        %li= link_to_anchor t("products.basic_table"), "basic_table"
-    
-    .table.type_table.active
-      - if type_table
-        %a{:name => "type_table"}
-        %h3= t("products.type_table")
-        .type_table= type_table
-    .table.safety_table
-      - if safety_table
-        %a{:name => "safety_table"}
-        %h3= t("products.safety_table")
-        .safety_table= safety_table
-    .table.basic_table
-      - if basic_table
-        %a{:name => "basic_table"}
-        %h3= t("products.basic_table")
-        .basic_table= basic_table
+      .table.type_table.active
+        - if type_table
+          %a{:name => "type_table"}
+          %h3= t("products.type_table")
+          .type_table= type_table
+      .table.safety_table
+        - if safety_table
+          %a{:name => "safety_table"}
+          %h3= t("products.safety_table")
+          .safety_table= safety_table
+      .table.basic_table
+        - if basic_table
+          %a{:name => "basic_table"}
+          %h3= t("products.basic_table")
+          .basic_table= basic_table
 
 - if @product.system_photo.file? or @product.send("system_#{current_locale}?")
   %h2= t("products.system")
@@ -49,7 +63,21 @@
       .photo= image_tag @product.system_photo.url
     - if system_body = @product.send("system_#{current_locale}_html")
       .body= system_body
+      
+- unless @product.addons.empty?
+  #addons
+    %h2= t("products.addons")
+    .addons
+      %ul#addon_nav
+        - @product_addons_grouped.each_with_index do |category, idx|
+          %li{active_if_first(idx)}= link_to_anchor category.first, category.first.make_websafe
+      - @product_addons_grouped.each_with_index do |category, idx|
+        .addon_category{addon_category_class(category, idx)}
+          %h3= category.first
+          - addon = category[1]
+          .addons_wrapper= render :partial => "addons/addon_for_product", :collection => addon
 
+= link_to_back
 
 - admin_section do
   = link_to "Uredi produkt", edit_category_product_path(@product.category, @product)

@@ -2,6 +2,8 @@
   %ol
     %li= link_to t("menu.posts"), posts_path  
     %li= link_to t("menu.about"), about_path
-    %li= link_to t("menu.partners"), partners_path  
+    %li= link_to t("menu.partners"), partners_path
     %li= link_to t("menu.offer"), categories_path
+    - if admin?
+      %li= link_to t("menu.addons"), addon_categories_path
     %li= link_to t("menu.inquiries"), new_inquiry_path
