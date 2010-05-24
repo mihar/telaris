@@ -23,6 +23,9 @@
     
     .question= f.label :body, Inquiry.human_attribute_name(:body)
     .answer= f.text_area :body
+    
+    .question= f.label :captcha, "Prepišite besedi"
+    = recaptcha_tags
   
   %fieldset.submit
     = f.submit t("forms.submit.send")

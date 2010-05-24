@@ -454,34 +454,34 @@ form fieldset {
   .errorExplanation h2 {
     font-size: 20px; }
 
-#content table td, #content table th {
+#content table.nice td, #content table.nice th, #content .table table td, #content .table table th {
   padding: 0;
   padding-top: 5px;
   padding-right: 22.5px;
   padding-left: 2.5px;
   vertical-align: middle; }
-#content table thead tr th {
+#content table.nice thead tr th, #content .table table thead tr th {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   text-align: left;
   border-bottom: 2px solid #eee;
   color: #000;
   white-space: nowrap; }
-  #content table thead tr th.rowspan {
+  #content table.nice thead tr th.rowspan, #content .table table thead tr th.rowspan {
     border-bottom: 0; }
-  #content table thead tr th a:hover {
+  #content table.nice thead tr th a:hover, #content .table table thead tr th a:hover {
     background-color: #efefef; }
-  #content table thead tr th a.ascending, #content table thead tr th a.descending {
+  #content table.nice thead tr th a.ascending, #content table.nice thead tr th a.descending, #content .table table thead tr th a.ascending, #content .table table thead tr th a.descending {
     background-color: #efefef;
     background-position: right center;
     background-repeat: no-repeat; }
-  #content table thead tr th a.ascending {
+  #content table.nice thead tr th a.ascending, #content .table table thead tr th a.ascending {
     background-image: url(/images/ui/ascending.png); }
-  #content table thead tr th a.descending {
+  #content table.nice thead tr th a.descending, #content .table table thead tr th a.descending {
     background-image: url(/images/ui/descending.png); }
-#content table tbody tr:hover td {
+#content table.nice tbody tr:hover td, #content .table table tbody tr:hover td {
   background: #efefef; }
-#content table tbody tr th {
+#content table.nice tbody tr th, #content .table table tbody tr th {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   text-align: left;
@@ -489,16 +489,16 @@ form fieldset {
   color: #000;
   white-space: nowrap;
   border-bottom-width: 1px; }
-  #content table tbody tr th.rowspan {
+  #content table.nice tbody tr th.rowspan, #content .table table tbody tr th.rowspan {
     border-bottom: 0; }
-#content table tbody tr td {
+#content table.nice tbody tr td, #content .table table tbody tr td {
   border-bottom: 1px solid #eee; }
-  #content table tbody tr td .user {
+  #content table.nice tbody tr td .user, #content .table table tbody tr td .user {
     white-space: nowrap;
     width: 100px;
     margin: 0 !important;
     padding: 0; }
-    #content table tbody tr td .user a {
+    #content table.nice tbody tr td .user a, #content .table table tbody tr td .user a {
       display: block;
       padding: 1px 5px; }
 
@@ -636,15 +636,11 @@ div.section {
       #categories-index .category .text h2 a {
         color: #000; }
 
-#products-index .product {
-  display: inline;
-  float: left;
-  width: 350px;
+#products-index .product_row {
   display: inline-block;
   display: block;
-  margin-top: 0;
-  margin-bottom: 0; }
-  #products-index .product:after {
+  margin-bottom: 10px; }
+  #products-index .product_row:after {
     clear: both;
     content: ' ';
     display: block;
@@ -653,39 +649,58 @@ div.section {
     visibility: hidden;
     width: 0;
     height: 0; }
-  * html #products-index .product {
+  * html #products-index .product_row {
     height: 1%; }
-  #products-index .product .image {
+  #products-index .product_row .product {
     display: inline;
     float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 130px; }
-    #products-index .product .image img {
-      border-radius: 7px;
-      -moz-border-radius: 7px;
-      -webkit-border-radius: 7px; }
-  #products-index .product .text {
-    display: inline;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 180px; }
-    #products-index .product .text a {
+    width: 350px;
+    display: inline-block;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0; }
+    #products-index .product_row .product:after {
+      clear: both;
+      content: ' ';
       display: block;
-      margin: 0;
+      font-size: 0;
+      line-height: 0;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    * html #products-index .product_row .product {
+      height: 1%; }
+    #products-index .product_row .product .image {
+      display: inline;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
       margin-bottom: 10px;
-      color: #000;
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 20px;
-      font-weight: bold;
-      text-shadow: 0px 1px 1px #BABABA; }
-    #products-index .product .text ul {
-      margin: 0; }
+      width: 130px; }
+      #products-index .product_row .product .image img {
+        border-radius: 7px;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px; }
+    #products-index .product_row .product .text {
+      display: inline;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 180px; }
+      #products-index .product_row .product .text a {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+        color: #000;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 0px 1px 1px #BABABA; }
+      #products-index .product_row .product .text ul {
+        margin: 0; }
 
 #products-show .pitch {
   font-size: 16px;
