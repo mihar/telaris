@@ -4,7 +4,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   config.gem 'will_paginate'
-  config.gem 'inherited_resources', :version => "1.0.3"
+  config.gem 'inherited_resources'
   config.gem 'paperclip'
   config.gem 'RedCloth'
   config.gem 'haml'
