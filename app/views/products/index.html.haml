@@ -1,7 +1,8 @@
 = title @category.send("name_#{current_locale}")
 .description= @category.send("description_#{current_locale}_html")
 
-= render collection
+- collection.in_groups_of(2).each do |row|
+  .product_row= render row
 
 - admin_section do
   - if @category

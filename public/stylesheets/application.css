@@ -1114,14 +1114,16 @@ div.section {
         margin: 0; }
 
 body {
+  background: url(/images/backgrounds/body_gradient.png) repeat-x fixed; }
+
+#container {
   position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 800px;
   display: inline-block;
-  display: block;
-  background: url(/images/backgrounds/body_gradient.png) repeat-x fixed; }
-  body:after {
+  display: block; }
+  #container:after {
     clear: both;
     content: ' ';
     display: block;
@@ -1130,7 +1132,7 @@ body {
     visibility: hidden;
     width: 0;
     height: 0; }
-  * html body {
+  * html #container {
     height: 1%; }
 
 #header {

@@ -1,8 +1,8 @@
 .product
   .image
-    - if product.photo?
+    - if product.photo and product.photo.photo.file?
       - link_to [product.category, product] do
-        = image_tag product.photo.url(:small)
+        = image_tag product.photo.photo.url(:small)
   .text
     = link_to product.send("name_#{current_locale}"), [product.category, product]
     .summary= product.send("summary_#{current_locale}_html")

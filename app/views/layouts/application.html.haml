@@ -12,25 +12,26 @@
     #spinner{:style => 'display: none;'}
       Osvežujem 
       = image_tag 'ui/loader.gif'
-      
-    #header
-      - if admin?
-        #authentication
-          %p.logged_in Prijavljen kot adminstrator
-          %p.log_out= link_to "Odjava", session_path, :method => :delete
     
-      #languages
-        .list
-          - languages
-      %h1= link_to_span t("head.title"), root_path        
-      %h2= link_to_span t("head.subtitle"), root_path
-      = render "layouts/menu"
+    #container
+      #header
+        - if admin?
+          #authentication
+            %p.logged_in Prijavljen kot adminstrator
+            %p.log_out= link_to "Odjava", session_path, :method => :delete
+    
+        #languages
+          .list
+            - languages
+        %h1= link_to_span t("head.title"), root_path        
+        %h2= link_to_span t("head.subtitle"), root_path
+        = render "layouts/menu"
 
-    #content
-      = render "shared/flash", :flash => flash
-      = yield
+      #content
+        = render "shared/flash", :flash => flash
+        = yield
       
-    #footer
-      %p 
-        Vse pravice pridržane
-        %strong Telaris d.o.o.
+      #footer
+        %p 
+          Vse pravice pridržane
+          %strong Telaris d.o.o.

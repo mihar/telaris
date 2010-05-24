@@ -1,4 +1,9 @@
 class ApplicationController < ActionController::Base
+  # include ExceptionNotification::Notifiable
+  # ExceptionNotification::Notifier.exception_recipients = %w(rasmajx@gmail.com)
+  # ExceptionNotification::Notifier.sender_address = %("Telaris App" <app@telaris.si>)
+  # ExceptionNotification::Notifier.email_prefix = "[TELARIS] "
+  
   helper :all
   helper_method :body_attrs, :current_locale, :admin?
   before_filter :set_locale, :authenticate

@@ -23,25 +23,28 @@
         :background rgb(221, 221, 221)
 
 #products-index
-  .product
-    +wrapper(7)
-    .image
-      +column(3)
-      img
-        +radius
-    .text
-      +column(4)
-      a
-        :display block
-        :margin 0
-          :bottom 10px
-        :color #000
-        +sans
-        +large_text
-        +bold
-        +mid_shadow
-      ul
-        :margin 0
+  .product_row
+    +clearfix
+    :margin-bottom 10px
+    .product
+      +wrapper(7)
+      .image
+        +column(3)
+        img
+          +radius
+      .text
+        +column(4)
+        a
+          :display block
+          :margin 0
+            :bottom 10px
+          :color #000
+          +sans
+          +large_text
+          +bold
+          +mid_shadow
+        ul
+          :margin 0
     
 
 #products-show
