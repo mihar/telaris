@@ -3,6 +3,9 @@ class Product < ActiveRecord::Base
   has_many :photos, :as => :photographable, :dependent => :destroy
   has_and_belongs_to_many :addons
   accepts_nested_attributes_for :photos
+  before_save :remove_attachments
+
+  attr_accessor :remove_system_photo, :remove_technical_photo
 
   has_attached_file :system_photo, :styles => { :mini_square => "35x35#", :square => "75x75#", :small_square => "150x150#", :small => "150x150>", :book => "380x280#", :normal => "550x550>" },
                     :url  => "/assets/system_photos/:id/:style/:basename.:extension",
@@ -16,12 +19,19 @@ class Product < ActiveRecord::Base
   def photo
     photos.first unless photos.empty?
   end
-  
+    
   def other_photos(_photo)
     photos.reject { |photo| photo == _photo }
   end
   
   def photo?
     !!photo
+  end
+  
+  protected
+  
+  def remove_attachments
+    self.system_photo = nil if remove_system_photo
+    self.technical_photo = nil if remove_technical_photo
   end
 end

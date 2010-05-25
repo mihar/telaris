@@ -41,7 +41,7 @@
         - resource.photos.each do |photo|
           .image
             = image_tag photo.photo.url(:mini_square)
-            = link_to "X", photo, :method => :delete, :confirm => destroy_confirmation(photo)
+            = link_to "X", photo, :method => :delete, :confirm => destroy_confirmation(photo) + " Vse ostale spremembe bodo izgubljene!"
       - f.fields_for :photos, resource.photos.build do |fp|
         .question= fp.label :photo, "Nova fotografija"
         .answer= fp.file_field :photo, :size => 20
@@ -49,14 +49,18 @@
     .photo
       - if resource.system_photo.file?
         = f.label "Obstoječa sistemska fotografija"
-        = image_tag resource.system_photo.url(:mini_square)
+        .image
+          = image_tag resource.system_photo.url(:mini_square)
+          = link_to "X", "#photos", :id => "product_system_photo_remove"
       .question= f.label :system_photo, "Sistemska fotografija"
       .answer= f.file_field :system_photo, :size => 20
 
     .photo
       - if resource.technical_photo.file?
         = f.label "Obstoječa skica"
-        = image_tag resource.technical_photo.url(:mini_square)
+        .image
+          = image_tag resource.technical_photo.url(:mini_square)
+          = link_to "X", "#photos", :id => "product_technical_photo_remove"
       .question= f.label :technical_photo, "Tehnična skica"
       .answer= f.file_field :technical_photo, :size => 20
 
