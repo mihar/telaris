@@ -6,4 +6,4 @@
     %li= link_to t("menu.offer"), categories_path
     - if admin?
       %li= link_to t("menu.addons"), addon_categories_path
-    %li= link_to t("menu.inquiries"), new_inquiry_path
+    %li= link_to t("menu.inquiries"), admin?? inquiries_path : new_inquiry_path

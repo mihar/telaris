@@ -1,5 +1,8 @@
 = title "Poizvedba ##{resource.id}"
 
+- admin_section do
+  = link_to "Odstrani", resource, :method => :delete, :confirm => destroy_confirmation(resource)
+
 .field
   .description Datum
   .value= l resource.created_at
