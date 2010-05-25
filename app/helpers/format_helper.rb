@@ -7,4 +7,8 @@ module FormatHelper
       end
     end
   end
+
+  def flag_image_tag(lang = :si)
+    image_tag "flags/#{lang}.png"
+  end
 end

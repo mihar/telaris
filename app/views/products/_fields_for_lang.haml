@@ -8,11 +8,12 @@
     %li= link_to_local "Tabela tipov", "type_table_#{l}"
     %li= link_to_local "Tabela var. raz.", "safety_table_#{l}"
     %li= link_to_local "Tabela osn. pod.", "basic_table_#{l}"
+    %li= link_to_local "Dodatna oprema", "addons"
     %li= link_to_local "Foto", "photos"
   
 
   %a{:name => "name_#{l}"}
-  %fieldset
+  %fieldset.delimiter
     %legend Naziv
     .half.first
       .question= f.label "name_#{l}", "Naziv"
@@ -25,7 +26,7 @@
     = link_to_top
 
   %a{:name => "body_#{l}"}
-  %fieldset
+  %fieldset.delimiter
     %legend Besedilo
     .half.first
       .question= f.label "summary_#{l}", "Povzetek"
@@ -54,7 +55,7 @@
     = link_to_top
 
   %a{:name => "basic_table_#{l}"}
-  %fieldset.basic_table
+  %fieldset.basic_table.delimiter
     %legend Tabela osnovnih podatkov
     = f.tinymce "basic_table_#{l}"
     = link_to_top

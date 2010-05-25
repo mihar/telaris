@@ -179,12 +179,21 @@
       .photo
         +wrapper(5)
       &.basic_table
-        :padding-bottom 40px
-        :border-bottom 1px solid #999
+        :padding-bottom 20px
         
       .second
         +prepend(1)
-        
+      
+    .category
+      h3
+        +small_text
+        :margin 0
+      +wrapper(5)
+      ul
+        :margin-top 0px
+        li
+          :list-style none
+      
     fieldset.submit
       +radius
       :padding 5px
@@ -200,6 +209,7 @@
           +lite_shadow
           +ultra_small_text
           :font-style normal
+        
       
   
     h2

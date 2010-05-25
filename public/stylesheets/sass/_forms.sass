@@ -3,10 +3,16 @@ form
     &.first
       +wrapper(6)
       +suffix(1)
+      input[type=text]
+        :width = 10 * !column + "px"
       &.narrow
         +wrapper(3)
     &.second
       +wrapper(4)
+  .full
+    :clear both
+    textarea
+      :width 710px
   fieldset.submit
     :clear both
     :margin 0

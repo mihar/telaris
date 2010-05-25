@@ -1,24 +1,79 @@
 = error_messages_for :category
 
 - form_for resource, :html => {:multipart => true} do |f|
+  %fieldset.submit
+    = f.submit :Shrani
+    
   / %fieldset
   /   %legend Nadkategorija
   /   .question= f.label :parent_id, "Nadkategorija"
   /   .answer= f.collection_select :parent_id, Category.all.reject { |c| c == resource }, :id, :name_sl, :include_blank => true
 
-  %fieldset
-    %legend Naziv
-    = lang_specific_field f, :name, "Naziv"
-
-  %fieldset
-    %legend Povzetek
-    = lang_specific_field f, :abstract, "Povzetek", :text_area
-
+  %fieldset.delimiter
+    %legend 
+      Slovenščina
+      = flag_image_tag :si
     
-  %fieldset
-    %legend Opis
-    = lang_specific_field f, :description, "Opis", :text_area
+    .half.first
+      .question= f.label :name_sl, "Naziv"
+      .answer= f.text_field :name_sl
+    .half.second
+      .question= f.label :abstract_sl, "Povzetek"
+      .answer= f.text_area :abstract_sl
     
+    .full
+      .question= f.label :description_sl, "Opis"
+      .answer= f.text_area :description_sl
+    
+  %fieldset.delimiter
+    %legend 
+      Angleščina
+      = flag_image_tag :en
+
+    .half.first
+      .question= f.label :name_en, "Naziv"
+      .answer= f.text_field :name_en
+    .half.second
+      .question= f.label :abstract_en, "Povzetek"
+      .answer= f.text_area :abstract_en
+
+    .full
+      .question= f.label :description_en, "Opis"
+      .answer= f.text_area :description_en
+
+  %fieldset.delimiter
+    %legend 
+      Hrvaščina
+      = flag_image_tag :hr
+
+    .half.first
+      .question= f.label :name_hr, "Naziv"
+      .answer= f.text_field :name_hr
+    .half.second
+      .question= f.label :abstract_hr, "Povzetek"
+      .answer= f.text_area :abstract_hr
+
+    .full
+      .question= f.label :description_hr, "Opis"
+      .answer= f.text_area :description_hr
+      
+  %fieldset.delimiter
+    %legend 
+      Srbščina
+      = flag_image_tag :sr
+
+    .half.first
+      .question= f.label :name_sr, "Naziv"
+      .answer= f.text_field :name_sr
+    .half.second
+      .question= f.label :abstract_sr, "Povzetek"
+      .answer= f.text_area :abstract_sr
+
+    .full
+      .question= f.label :description_sr, "Opis"
+      .answer= f.text_area :description_sr
+
+
   %fieldset
     %legend Slika
     - if resource.photo and resource.photo.photo.file?

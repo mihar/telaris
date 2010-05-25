@@ -1,9 +1,57 @@
 = error_messages_for :post
 
 - form_for resource do |f|
+  %fieldset.submit
+    = f.submit :Shrani
+    
+  %fieldset.delimiter
+    %legend
+      Slovenščina
+      = flag_image_tag :si
+      
+    .half.first
+      .question= f.label :title_sl, "Naziv"
+      .answer= f.text_field :title_sl
+    .half.second
+      .question= f.label :body_sl, "Besedilo"
+      .answer= f.text_area :body_sl
+      
+  %fieldset.delimiter
+    %legend 
+      Angleščina
+      = flag_image_tag :en
+      
+    .half.first
+      .question= f.label :title_en, "Naziv"
+      .answer= f.text_field :title_en
+    .half.second
+      .question= f.label :body_en, "Besedilo"
+      .answer= f.text_area :body_en
+
+
+  %fieldset.delimiter
+    %legend 
+      Hrvaščina
+      = flag_image_tag :hr
+      
+    .half.first
+      .question= f.label :title_hr, "Naziv"
+      .answer= f.text_field :title_hr
+    .half.second
+      .question= f.label :body_hr, "Besedilo"
+      .answer= f.text_area :body_hr
+
   %fieldset
-    %legend Novica
-    = lang_specific_field f, :title, "Naziv"
-    = lang_specific_field f, :body, "Besedilo", :text_area
+    %legend 
+      Srbščina
+      = flag_image_tag :sr
+      
+    .half.first
+      .question= f.label :title_sr, "Naziv"
+      .answer= f.text_field :title_sr
+    .half.second
+      .question= f.label :body_sr, "Besedilo"
+      .answer= f.text_area :body_sr
+
   %fieldset.submit
     = f.submit :Shrani

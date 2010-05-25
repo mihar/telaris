@@ -331,6 +331,8 @@ form .half.first {
     height: 0; }
   * html form .half.first {
     height: 1%; }
+  form .half.first input[type=text] {
+    width: 300px; }
   form .half.first.narrow {
     display: inline;
     float: left;
@@ -369,6 +371,10 @@ form .half.second {
     height: 0; }
   * html form .half.second {
     height: 1%; }
+form .full {
+  clear: both; }
+  form .full textarea {
+    width: 710px; }
 form fieldset.submit {
   clear: both;
   margin: 0; }
@@ -570,6 +576,9 @@ div.section {
   #abouts-show .map #map h4 {
     margin: 0;
     margin-bottom: 10px; }
+
+.abouts form textarea {
+  width: 100%; }
 
 #partners-index .partner {
   position: relative;
@@ -1004,10 +1013,35 @@ div.section {
     * html #products-new form fieldset .photo, * html #products-edit form fieldset .photo, * html #products-create form fieldset .photo, * html #products-update form fieldset .photo {
       height: 1%; }
   #products-new form fieldset.basic_table, #products-edit form fieldset.basic_table, #products-create form fieldset.basic_table, #products-update form fieldset.basic_table {
-    padding-bottom: 40px;
-    border-bottom: 1px solid #999; }
+    padding-bottom: 20px; }
   #products-new form fieldset .second, #products-edit form fieldset .second, #products-create form fieldset .second, #products-update form fieldset .second {
     padding-left: 50px; }
+  #products-new form .category, #products-edit form .category, #products-create form .category, #products-update form .category {
+    display: inline;
+    float: left;
+    width: 250px;
+    display: inline-block;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0; }
+    #products-new form .category h3, #products-edit form .category h3, #products-create form .category h3, #products-update form .category h3 {
+      font-size: 14px;
+      margin: 0; }
+    #products-new form .category:after, #products-edit form .category:after, #products-create form .category:after, #products-update form .category:after {
+      clear: both;
+      content: ' ';
+      display: block;
+      font-size: 0;
+      line-height: 0;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    * html #products-new form .category, * html #products-edit form .category, * html #products-create form .category, * html #products-update form .category {
+      height: 1%; }
+    #products-new form .category ul, #products-edit form .category ul, #products-create form .category ul, #products-update form .category ul {
+      margin-top: 0px; }
+      #products-new form .category ul li, #products-edit form .category ul li, #products-create form .category ul li, #products-update form .category ul li {
+        list-style: none; }
   #products-new form fieldset.submit, #products-edit form fieldset.submit, #products-create form fieldset.submit, #products-update form fieldset.submit {
     border-radius: 7px;
     -moz-border-radius: 7px;
@@ -1112,6 +1146,9 @@ div.section {
         top: 0;
         right: 0;
         margin: 0; }
+
+#recaptcha_error {
+  display: none; }
 
 body {
   background: url(/images/backgrounds/body_gradient.png) repeat-x fixed; }

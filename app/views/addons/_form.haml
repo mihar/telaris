@@ -1,17 +1,30 @@
 = error_messages_for :addon
 
 - form_for [resource.addon_category, resource], :html => {:multipart => true} do |f|
-  %fieldset
-    %legend Naziv
-    = f.text_field :name
+  %fieldset.delimiter
+    %legend Oprema
+    
+    .half.first
+      .question= f.label :name, "Naziv"
+      .answer= f.text_field :name
+    .half.second
+      .question= f.label :url, "Povezava"
+      .answer= f.text_field :url
     
   %fieldset
     %legend Opis
-    = lang_specific_field f, :body, "Opis", :text_area
-  
-  %fieldset
-    %legend Povezava
-    = f.text_field :url
+    
+    .half.first
+      .question= f.label :body_sl, "Opis #{flag_image_tag :si}"
+      .answer= f.text_area :body_sl
+      .question= f.label :body_en, "Opis #{flag_image_tag :en}"
+      .answer= f.text_area :body_en    
+    .half.second
+      .question= f.label :body_hr, "Opis #{flag_image_tag :hr}"
+      .answer= f.text_area :body_hr
+      .question= f.label :body_sr, "Opis #{flag_image_tag :sr}"
+      .answer= f.text_area :body_sr
+
     
   %fieldset
     %legend Fotografija

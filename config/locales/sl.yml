@@ -42,6 +42,7 @@ sl:
       title: "Poizvedba"
       instructions: "Na vaša vprašanja Vam bomo z veseljem odgovorili. Izpolnite spodnji formular in naš odgovor boste prejeli v najkrajšem možnem času."
       mandatory: "Polja označena z * morajo biti obvezno izpolnjena!"
+      captcha: "Prepišite besedi"
       
   products:
     addons: "Dodatna oprema"
