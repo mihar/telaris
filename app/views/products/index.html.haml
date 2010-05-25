@@ -2,10 +2,7 @@
 .description= @category.send("description_#{current_locale}_html")
 
 - collection.in_groups_of(2).each do |row|
-  - if row
-    .product_row
-      - row.each do |product|
-        = render product
+  .product_row= render :partial => "product", :collection => row
 
 - admin_section do
   - if @category
