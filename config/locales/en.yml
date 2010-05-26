@@ -1,5 +1,65 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  menu:
+    home: "Home"
+    posts: "News"
+    about: "Company"
+    partners: "Partners"
+    offer: "Products"
+    addons: "Add-ons"
+    inquiries: "Inquiry"
+    
+  site:
+    title: "Telaris d.o.o. - Laser applications, solutions and systems"
+  head:
+    title: "Telaris d.o.o."
+    subtitle: "Laser applications, solutions and systems"
+    choose_language: "Choose language"
+    language_sl: "Slovene"
+    language_en: "English"
+    language_hr: "Croatian"
+    language_sr: "Serbian"
+
+  forms:
+    submit:
+      send: "Send"
+      
+  index:
+    title: "Welcome"
+  posts:
+    index:
+      title: "News"
+  partners:
+    index:
+      title: "Partners"
+  categories:
+    index:
+      title: "Products"
+  abouts:
+    show:
+      title: "Company"
+  inquiries:
+    new:
+      title: "Inquiry"
+      instructions: "We will gladly answer your question. Please fill out the form below and you will receive our answer in the shortest time possible."
+      captcha: "Write the words"
+      
+  products:
+    addons: "Add-ons"
+    technical: "Technical details"
+    type_table: "Types"
+    safety_table: "Safety classes"
+    basic_table: "Basic information"
+    system: "System information"
+    
+  addon_categories:
+    index:
+      title: "Addons"
+  
+  activerecord:
+    attributes:
+      inquiry:
+        contact_name: "Company or your name"
+        industry: "Industry"
+        phone: "Phone"
+        email: "E-mail"
+        body: "Your message / question"
