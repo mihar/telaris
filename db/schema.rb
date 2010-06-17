@@ -67,14 +67,14 @@ ActiveRecord::Schema.define(:version => 20100617123751) do
     t.string   "abstract_en"
     t.string   "abstract_hr"
     t.string   "abstract_sr"
-    t.text     "description_sl",      :limit => 255
-    t.text     "description_en",      :limit => 255
-    t.text     "description_hr",      :limit => 255
-    t.text     "description_sr",      :limit => 255
-    t.text     "description_sl_html", :limit => 255
-    t.text     "description_en_html", :limit => 255
-    t.text     "description_hr_html", :limit => 255
-    t.text     "description_sr_html", :limit => 255
+    t.text     "description_sl"
+    t.text     "description_en"
+    t.text     "description_hr"
+    t.text     "description_sr"
+    t.text     "description_sl_html"
+    t.text     "description_en_html"
+    t.text     "description_hr_html"
+    t.text     "description_sr_html"
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
