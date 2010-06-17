@@ -1,0 +1,66 @@
+hr:
+  menu:
+    home: "Domov"
+    posts: "Novice"
+    about: "Podjetje"
+    partners: "Partnerji"
+    offer: "Ponudba"
+    addons: "Dodatna oprema"
+    inquiries: "Poizvedba"
+    
+  site:
+    title: "Telaris d.o.o. - Trženje laserskih aplikacij, rešitev in sistemov"
+  head:
+    title: "Telaris d.o.o."
+    subtitle: "Trženje laserskih aplikacij, rešitev in sistemov"
+    choose_language: "Izberite jezik"
+    language_sl: "Slovenščina"
+    language_en: "Angleščina"
+    language_hr: "Hrvaščina"
+    language_sr: "Srbščina"
+
+  forms:
+    submit:
+      send: "Pošlji"
+      
+  index:
+    title: "Dobrodošli"
+  posts:
+    index:
+      title: "Novice"
+  partners:
+    index:
+      title: "Partnerji"
+  categories:
+    index:
+      title: "Ponudba"
+  abouts:
+    show:
+      title: "Podjetje"
+  inquiries:
+    new:
+      title: "Poizvedba"
+      instructions: "Na vaša vprašanja Vam bomo z veseljem odgovorili. Izpolnite spodnji formular in naš odgovor boste prejeli v najkrajšem možnem času."
+      mandatory: "Polja označena z * morajo biti obvezno izpolnjena!"
+      captcha: "Prepišite besedi"
+      
+  products:
+    addons: "Dodatna oprema"
+    technical: "Tehnični podatki"
+    type_table: "Tipi"
+    safety_table: "Varnostni razredi"
+    basic_table: "Osnovni podatki"
+    system: "Sistem"
+    
+  addon_categories:
+    index:
+      title: "Dodatna oprema"
+  
+  activerecord:
+    attributes:
+      inquiry:
+        contact_name: "Podjetje oz. vaše ime"
+        industry: "Industrija"
+        phone: "Telefon"
+        email: "E-mail"
+        body: "Vaše sporočilo / vprašanje"

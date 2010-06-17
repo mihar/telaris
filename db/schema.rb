@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100521143322) do
+ActiveRecord::Schema.define(:version => 20100617123751) do
 
   create_table "abouts", :force => true do |t|
     t.text     "about_sl"
@@ -67,14 +67,14 @@ ActiveRecord::Schema.define(:version => 20100521143322) do
     t.string   "abstract_en"
     t.string   "abstract_hr"
     t.string   "abstract_sr"
-    t.string   "description_sl"
-    t.string   "description_en"
-    t.string   "description_hr"
-    t.string   "description_sr"
-    t.string   "description_sl_html"
-    t.string   "description_en_html"
-    t.string   "description_hr_html"
-    t.string   "description_sr_html"
+    t.text     "description_sl",      :limit => 255
+    t.text     "description_en",      :limit => 255
+    t.text     "description_hr",      :limit => 255
+    t.text     "description_sr",      :limit => 255
+    t.text     "description_sl_html", :limit => 255
+    t.text     "description_en_html", :limit => 255
+    t.text     "description_hr_html", :limit => 255
+    t.text     "description_sr_html", :limit => 255
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
